@@ -1,0 +1,13 @@
+# Entorno eamrag (Python 3.11). PyTorch con CUDA:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+torch>=2.4
+transformers>=4.44,<5
+sentencepiece
+protobuf
+numpy
+pandas
+tqdm
+openai
+python-dotenv
+# Sólo para make_pdf.py (documentación en PDF).
+reportlab

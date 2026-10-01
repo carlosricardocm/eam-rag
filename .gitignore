@@ -1,0 +1,7 @@
+# Secretos
+.env
+
+# Artefactos generados
+store/
+__pycache__/
+*.pyc
