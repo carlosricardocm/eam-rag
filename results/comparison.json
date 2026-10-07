@@ -1,0 +1,2134 @@
+[
+ {
+  "q": "¿Qué enfermedad sufre Dahlmann tras golpearse la frente?",
+  "title": "El sur",
+  "author": "Jorge Luis Borges",
+  "answer": "Una septicemia, provocada por la herida que le hizo la arista de un batiente recién pintado; estuvo a punto de morir.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el sur (jorge luis borges)",
+   "míster taylor (augusto monterroso)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **“El sur”**, de **Jorge Luis Borges**, Dahlmann sufre una **septicemia**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que Dahlmann sufre una septicemia, que es lo esencial de la respuesta de referencia.",
+   "prompt_tokens": 1564,
+   "completion_tokens": 102
+  },
+  "direct": {
+   "text": "Dahlmann sufre una **septicemia** tras golpearse la frente.\n\nEsto ocurre en el cuento **“El Sur”**, de **Jorge Luis Borges**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que Dahlmann sufre una septicemia, sin contradecir la referencia.",
+   "prompt_tokens": 77,
+   "completion_tokens": 117
+  }
+ },
+ {
+  "q": "¿Qué ve el narrador en el sótano de la casa de la calle Garay?",
+  "title": "El Aleph",
+  "author": "Jorge Luis Borges",
+  "answer": "Ve el Aleph: una pequeña esfera tornasolada de dos o tres centímetros que contiene todo el universo, todos los puntos del espacio vistos desde todos los ángulos.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "después del almuerzo (julio cortázar)",
+   "ícaro (sergio pitol)",
+   "las fieras (roberto arlt)",
+   "juan fariña (baldomero lillo)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no ofrece una respuesta de fondo sobre lo que ve el narrador.",
+   "prompt_tokens": 1369,
+   "completion_tokens": 99
+  },
+  "direct": {
+   "text": "En el sótano de la casa de la calle Garay, el narrador ve **el Aleph**: una pequeña esfera tornasolada en la que se ven, simultáneamente y sin superposición, **todos los lugares del mundo y del universo**.\n\nEsto ocurre en **“El Aleph”**, de **Jorge Luis Borges**.",
+   "verdict": "correcto",
+   "reason": "Identifica el Aleph como una pequeña esfera tornasolada que contiene simultáneamente todos los lugares del mundo y del universo, sin contradecir la referencia.",
+   "prompt_tokens": 84,
+   "completion_tokens": 171
+  }
+ },
+ {
+  "q": "¿Qué hacen los hermanos cuando los ruidos toman la parte del fondo de la casa?",
+  "title": "Casa tomada",
+  "author": "Julio Cortázar",
+  "answer": "El narrador cierra de golpe la puerta de roble del pasillo, con llave y cerrojo, y los hermanos se resignan a vivir solo en la parte delantera de la casa.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "las ménades (julio cortázar)",
+   "conducta en los velorios (julio cortázar)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente al decir “No lo sé” y no ofrece una respuesta de fondo.",
+   "prompt_tokens": 1614,
+   "completion_tokens": 113
+  },
+  "direct": {
+   "text": "En **“Casa tomada”**, de **Julio Cortázar**, cuando los ruidos toman la parte del fondo de la casa, los hermanos **cierran la puerta que separa esa zona del resto de la casa** y se quedan viviendo solo en la parte delantera. Aceptan la pérdida de esa parte sin intentar recuperarla.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial: cierran la puerta que separa la zona tomada y se resignan a vivir en la parte delantera de la casa.",
+   "prompt_tokens": 82,
+   "completion_tokens": 205
+  }
+ },
+ {
+  "q": "¿En qué animal se convierte el hombre que visita el acuario del Jardin des Plantes?",
+  "title": "Axolotl",
+  "author": "Julio Cortázar",
+  "answer": "Se convierte en un axolotl (ajolote), la larva de batracio mexicano que observaba obsesivamente en el acuario.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "la mujer más pequeña del mundo (clarice lispector)",
+   "ser polvo (santiago dabove)",
+   "el camino de santiago (alejo carpentier)",
+   "semejante a la noche (alejo carpentier)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente al decir que no lo sabe y no proporciona el animal correcto.",
+   "prompt_tokens": 1509,
+   "completion_tokens": 105
+  },
+  "direct": {
+   "text": "Se convierte en un **axolote** —también llamado **ajolote**— en el cuento **“Axolotl”** de **Julio Cortázar**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que el hombre se convierte en un axolote o ajolote, que es lo esencial de la referencia.",
+   "prompt_tokens": 84,
+   "completion_tokens": 147
+  }
+ },
+ {
+  "q": "¿Qué novela lee el hombre sentado en el sillón de terciopelo verde?",
+  "title": "Continuidad de los parques",
+  "author": "Julio Cortázar",
+  "answer": "El título no se menciona: es una novela sobre dos amantes que planean un asesinato, y la víctima resulta ser el propio lector sentado en el sillón de terciopelo verde.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "continuidad de los parques (julio cortázar)",
+   "las fieras (roberto arlt)",
+   "trenzas (maría luisa bombal)",
+   "ser polvo (santiago dabove)",
+   "los inválidos (baldomero lillo)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no aporta una respuesta de fondo sobre la novela.",
+   "prompt_tokens": 1398,
+   "completion_tokens": 87
+  },
+  "direct": {
+   "text": "En **“Continuidad de los parques”**, de **Julio Cortázar**, el hombre sentado en el sillón de terciopelo verde lee **una novela cuyo título no se menciona**. Esa novela trata de **dos amantes que planean asesinar al marido de la mujer**, que resulta ser el propio lector.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial: indica que el título de la novela no se menciona, que trata de dos amantes que planean un asesinato y que la víctima resulta ser el propio lector en el sillón.",
+   "prompt_tokens": 81,
+   "completion_tokens": 204
+  }
+ },
+ {
+  "q": "¿Qué sueña el motociclista accidentado mientras está en el hospital?",
+  "title": "La noche boca arriba",
+  "author": "Julio Cortázar",
+  "answer": "Sueña que es un indio moteca que huye de los aztecas durante la guerra florida, y que lo capturan y llevan al teocalli para sacrificarlo; al final ese parece ser el mundo real y la ciudad moderna el sueño.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "las fieras (roberto arlt)",
+   "los inválidos (baldomero lillo)",
+   "cambiadores (baldomero lillo)",
+   "la noche boca arriba (julio cortázar)",
+   "el alma de la máquina (baldomero lillo)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no ofrece ninguna información sobre el sueño del motociclista.",
+   "prompt_tokens": 1570,
+   "completion_tokens": 94
+  },
+  "direct": {
+   "text": "En **“La noche boca arriba”**, de **Julio Cortázar**, el motociclista accidentado sueña —mientras está en el hospital— que es un **indígena moteca** que huye por la selva, perseguido por guerreros aztecas para ser capturado y sacrificado.",
+   "verdict": "correcto",
+   "reason": "La respuesta contiene lo esencial: sueña que es un indígena moteca perseguido por aztecas para ser capturado y sacrificado.",
+   "prompt_tokens": 79,
+   "completion_tokens": 185
+  }
+ },
+ {
+  "q": "¿Qué vomita el narrador que se queda en el departamento de Andrée en Buenos Aires?",
+  "title": "Carta a una señorita en París",
+  "author": "Julio Cortázar",
+  "answer": "Vomita conejitos vivos (llega a tener diez y luego once en el departamento de la calle Suipacha).",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "las fieras (roberto arlt)",
+   "carta a una señorita en parís (julio cortázar)",
+   "el camino de santiago (alejo carpentier)",
+   "pierre menard, autor del quijote (jorge luis borges)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "Vomita un conejito. La información proviene de **“Carta a una señorita en París”**, de **Julio Cortázar**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que el narrador vomita un conejito, que es lo esencial de la referencia.",
+   "prompt_tokens": 1596,
+   "completion_tokens": 84
+  },
+  "direct": {
+   "text": "El narrador vomita **conejitos**.\n\nEsto ocurre en **“Carta a una señorita en París”**, cuento de **Julio Cortázar**, incluido en *Bestiario*.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que el narrador vomita conejitos, que es lo esencial de la respuesta de referencia.",
+   "prompt_tokens": 84,
+   "completion_tokens": 131
+  }
+ },
+ {
+  "q": "¿Qué pasa con los automovilistas atrapados durante días en el embotellamiento de la autopista?",
+  "title": "La autopista del sur",
+  "author": "Julio Cortázar",
+  "answer": "Se organizan en grupos o comunidades con un jefe (Taunus) para racionar agua y comida, y a lo largo de las estaciones viven amores, enfermedades y muertes; cuando por fin el tránsito avanza, el grupo se dispersa y cada uno sigue solo entre desconocidos hacia París.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "después del almuerzo (julio cortázar)",
+   "la luna roja (roberto arlt)",
+   "juan fariña (baldomero lillo)",
+   "los inválidos (baldomero lillo)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no ofrece información de fondo sobre lo que ocurre con los automovilistas.",
+   "prompt_tokens": 1664,
+   "completion_tokens": 79
+  },
+  "direct": {
+   "text": "En **“La autopista del Sur”**, cuento de **Julio Cortázar**, los automovilistas quedan atrapados en un enorme embotellamiento en la autopista que va hacia París. Al pasar los días, dejan de ser simples desconocidos y forman una especie de comunidad: comparten comida y agua, se organizan para cuidar enfermos, conseguir provisiones y enfrentar el frío, el cansancio y la incertidumbre.\n\nDurante ese encierro surgen vínculos afectivos, conflictos e incluso muertes. Los personajes son identificados más por sus autos que por sus nombres, como el ingeniero del Peugeot 404 o la muchacha del Dauphine. Finalmente, el tráfico empieza a avanzar de pronto y la comunidad se deshace; cada uno vuelve a su vida, y los lazos creados durante el embotellamiento se pierden en el movimiento de la ciudad.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial: los automovilistas se organizan como comunidad para compartir recursos y afrontar dificultades, viven vínculos, enfermedades y muertes, y al reanudarse el tránsito la comunidad se disuelve.",
+   "prompt_tokens": 87,
+   "completion_tokens": 365
+  }
+ },
+ {
+  "q": "¿Cómo intenta fray Bartolomé Arrazola salvarse de los indígenas que lo iban a sacrificar?",
+  "title": "El eclipse",
+  "author": "Augusto Monterroso",
+  "answer": "Aprovechando que sabía que ese día habría un eclipse total de sol, los amenaza con oscurecer el sol si lo matan; no le sirve, porque los mayas ya conocían los eclipses y lo sacrifican.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el eclipse (augusto monterroso)",
+   "el matadero (esteban echeverría)",
+   "la extraña muerte de fray pedro (rubén darío)",
+   "el paréntesis (rómulo gallegos)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **“El eclipse” de Augusto Monterroso**, fray Bartolomé Arrazola intenta salvarse usando su conocimiento de que ese día habría un eclipse total de sol. Les dice a los indígenas: **“Si me matáis, puedo hacer que el sol se oscurezca en su altura.”**",
+   "verdict": "correcto",
+   "reason": "Explica que intenta salvarse aprovechando su conocimiento del eclipse y amenazando con oscurecer el sol, que es lo esencial de la referencia.",
+   "prompt_tokens": 1443,
+   "completion_tokens": 94
+  },
+  "direct": {
+   "text": "En **“El eclipse”**, de **Augusto Monterroso**, fray Bartolomé Arrazola intenta salvarse diciéndoles a los indígenas que, si lo sacrifican, hará que el sol se oscurezca. Aprovecha que sabe que ocurrirá un eclipse solar y pretende usar ese conocimiento para intimidarlos.",
+   "verdict": "correcto",
+   "reason": "La respuesta identifica correctamente que intenta salvarse amenazando con oscurecer el sol aprovechando su conocimiento del eclipse.",
+   "prompt_tokens": 88,
+   "completion_tokens": 131
+  }
+ },
+ {
+  "q": "¿Qué negocio hacía Mr. Taylor con las cabezas reducidas?",
+  "title": "Míster Taylor",
+  "author": "Augusto Monterroso",
+  "answer": "Se asoció con su tío Mr. Rolston: Taylor conseguía y enviaba cabezas humanas reducidas a escala industrial desde la Amazonía y Rolston las vendía en Estados Unidos.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "míster taylor (augusto monterroso)",
+   "los inválidos (baldomero lillo)",
+   "el grisú (baldomero lillo)",
+   "trenzas (maría luisa bombal)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **“Míster Taylor” de Augusto Monterroso**, Mr. Taylor hacía negocio obteniendo y enviando **cabezas humanas reducidas en escala industrial**, mientras Mr. Rolston las vendía en su país.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial: Taylor obtenía y enviaba cabezas humanas reducidas a escala industrial y Rolston las vendía en su país.",
+   "prompt_tokens": 1480,
+   "completion_tokens": 106
+  },
+  "direct": {
+   "text": "En el cuento **“Mr. Taylor” de Augusto Monterroso**, Mr. Taylor hacía negocio **comerciando cabezas reducidas**: las conseguía en la selva —al principio como curiosidades indígenas— y luego las **exportaba a Estados Unidos**, donde se vendían como objetos exóticos de colección. El negocio creció tanto que terminó generando una producción cada vez más macabra de cabezas para satisfacer la demanda.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial: conseguía cabezas reducidas y las exportaba/vendía en Estados Unidos como objetos exóticos, sin contradecir la referencia aunque no mencione a Mr. Rolston.",
+   "prompt_tokens": 78,
+   "completion_tokens": 262
+  }
+ },
+ {
+  "q": "¿Qué hicieron con la oveja negra después de fusilarla?",
+  "title": "La oveja negra",
+  "author": "Augusto Monterroso",
+  "answer": "Un siglo después, el rebaño arrepentido le levantó una estatua ecuestre en el parque.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "semejante a la noche (alejo carpentier)",
+   "el matadero (esteban echeverría)",
+   "trenzas (maría luisa bombal)",
+   "la cruz de salomón (baldomero lillo)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta candidata se abstiene explícitamente de responder y no aporta la información esencial sobre la estatua levantada por el rebaño.",
+   "prompt_tokens": 1614,
+   "completion_tokens": 57
+  },
+  "direct": {
+   "text": "Después de fusilarla, **un siglo después el rebaño arrepentido le levantó una estatua ecuestre en el parque**.\n\nEsto proviene de la fábula **“La oveja negra”**, de **Augusto Monterroso**, incluida en *La oveja negra y demás fábulas*.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial de la referencia: un siglo después, el rebaño arrepentido le levantó una estatua ecuestre en el parque, sin contradecirla.",
+   "prompt_tokens": 78,
+   "completion_tokens": 270
+  }
+ },
+ {
+  "q": "¿Qué le pide Juvencio Nava a su hijo que diga a quienes lo van a fusilar?",
+  "title": "¡Diles que no me maten!",
+  "author": "Juan Rulfo",
+  "answer": "Que les diga que no lo maten, que tengan lástima de él y lo perdonen por caridad.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "¡diles que no me maten! (juan rulfo)",
+   "1833-1883 (manuel a. alonso)",
+   "el camino de santiago (alejo carpentier)",
+   "reunión (julio cortázar)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta candidata se abstiene explícitamente al decir que no lo sabe y no proporciona la información solicitada.",
+   "prompt_tokens": 1448,
+   "completion_tokens": 344
+  },
+  "direct": {
+   "text": "En **“¡Diles que no me maten!”**, de **Juan Rulfo**, **Juvencio Nava** le pide a su hijo **Justino** que les diga a quienes lo van a fusilar **que no lo maten** y que **tengan tantita lástima de él**.",
+   "verdict": "correcto",
+   "reason": "La respuesta incluye lo esencial: que Juvencio pide a Justino decirles que no lo maten y que tengan lástima de él, sin contradecir la referencia.",
+   "prompt_tokens": 85,
+   "completion_tokens": 163
+  }
+ },
+ {
+  "q": "¿A quién carga el padre sobre los hombros mientras camina de noche buscando Tonaya?",
+  "title": "No oyes ladrar a los perros",
+  "author": "Juan Rulfo",
+  "answer": "A su hijo Ignacio, herido, a quien lleva a Tonaya para que lo vea un doctor.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "es que somos muy pobres (juan rulfo)",
+   "trenzas (maría luisa bombal)",
+   "las fieras (roberto arlt)",
+   "conducta en los velorios (julio cortázar)",
+   "sharaya (álvaro mutis)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente de contestar y no identifica que el padre carga a su hijo Ignacio.",
+   "prompt_tokens": 1469,
+   "completion_tokens": 78
+  },
+  "direct": {
+   "text": "En **“No oyes ladrar los perros”**, de **Juan Rulfo**, el padre carga sobre los hombros a **su hijo Ignacio** mientras camina de noche buscando Tonaya.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que el padre carga sobre los hombros a su hijo Ignacio, que es lo esencial de la respuesta.",
+   "prompt_tokens": 84,
+   "completion_tokens": 98
+  }
+ },
+ {
+  "q": "¿Cómo es el viento y la tierra del pueblo de Luvina?",
+  "title": "Luvina",
+  "author": "Juan Rulfo",
+  "answer": "La tierra es pedregosa, empinada, reseca y sin árboles, llena de barrancas; el viento es pardo o negro, constante, y arranca techos y rasca las paredes.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "luvina (juan rulfo)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **“Luvina” de Juan Rulfo**, el viento es descrito como un aire fuerte y oscuro: “es pardo”, “un aire negro”, que se prende de las cosas “como si las mordiera” y a veces “se lleva el techo de las casas”. También sube de las barrancas “en tremolina” y no deja crecer ni a las plantas.\n\nLa tierra de Luvina es alta, pedregosa y árida: es “la más alta y la más pedregosa”, llena de “piedra cruda”. Además, “la tierra es empinada” y “se desgaja por todos lados en barrancas hondas”. Todo el paisaje aparece blanco, brillante, frío y sin verdor.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial sobre la tierra pedregosa, árida, empinada y llena de barrancas, y sobre el viento pardo o negro, constante y destructivo, sin contradecir la referencia.",
+   "prompt_tokens": 1503,
+   "completion_tokens": 197
+  },
+  "direct": {
+   "text": "En **“Luvina”**, cuento de **Juan Rulfo** incluido en *El llano en llamas*, el viento y la tierra aparecen como parte de un paisaje desolado:\n\n- **El viento** es fuerte, frío y constante; parece venir de las barrancas, se arremolina, raspa y “muerde” las cosas. Es un viento que no deja vivir ni crecer casi nada.\n- **La tierra** es seca, pobre, pedregosa y estéril. Luvina está sobre una loma árida, sin vegetación abundante, como un lugar abandonado y condenado por la naturaleza.\n\nEn conjunto, Rulfo presenta a Luvina como un pueblo inhóspito, triste y casi fantasmal.",
+   "verdict": "parcial",
+   "reason": "Describe adecuadamente la tierra como seca, pedregosa y estéril y el viento como constante y agresivo, pero omite rasgos importantes como que el viento es pardo o negro, que arranca techos, y que la tierra es empinada y llena de barrancas.",
+   "prompt_tokens": 79,
+   "completion_tokens": 545
+  }
+ },
+ {
+  "q": "¿Qué le pasó a la vaca de Tacha cuando creció el río?",
+  "title": "Es que somos muy pobres",
+  "author": "Juan Rulfo",
+  "answer": "La Serpentina, la vaca que su papá le regaló a Tacha, intentó cruzar el río crecido y la corriente se la llevó y la mató.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "es que somos muy pobres (juan rulfo)",
+   "el matadero (esteban echeverría)",
+   "las fieras (roberto arlt)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "En **“Es que somos muy pobres”**, de **Juan Rulfo**, la vaca de Tacha **se la llevó el río** cuando empezó a crecer; también se dice que **“se la ha matado el río”**.",
+   "verdict": "correcto",
+   "reason": "La respuesta indica lo esencial: que el río crecido se llevó a la vaca de Tacha y que murió.",
+   "prompt_tokens": 1484,
+   "completion_tokens": 87
+  },
+  "direct": {
+   "text": "En el cuento **“Es que somos muy pobres”**, de **Juan Rulfo**, cuando creció el río por las lluvias, **se llevó a la vaca de Tacha, llamada La Serpentina**. La vaca desapareció arrastrada por la corriente, lo que dejó a Tacha sin el animal que su padre le había dado como una especie de futuro patrimonio.",
+   "verdict": "correcto",
+   "reason": "La respuesta indica lo esencial: que el río crecido se llevó arrastrada a la vaca de Tacha, sin contradecir la referencia.",
+   "prompt_tokens": 81,
+   "completion_tokens": 427
+  }
+ },
+ {
+  "q": "¿Qué le explica el guardagujas al forastero sobre los trenes y las estaciones?",
+  "title": "El guardagujas",
+  "author": "Juan José Arreola",
+  "answer": "Que los trenes del país no cumplen los itinerarios, no se sabe si pasarán ni adónde llevarán, y que hay estaciones falsas, de pura apariencia, construidas en la selva con nombres de ciudades importantes.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "cambiadores (baldomero lillo)",
+   "el guardagujas (juan josé arreola)",
+   "los inválidos (baldomero lillo)",
+   "semejante a la noche (alejo carpentier)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "En **“El guardagujas”**, de **Juan José Arreola**, el guardagujas explica que hay muchísimos trenes y que los viajeros pueden usarlos con cierta frecuencia, pero que **no se trata de un servicio formal ni definitivo**: al subir a un tren, **nadie espera llegar necesariamente al sitio que desea**. También dice que la empresa hace circular trenes por lugares intransitables, que algunos trayectos pueden durar años y que incluso se prevén fallecimientos, por lo que se agregan un **vagón capilla ardiente** y un **vagón cementerio**.",
+   "verdict": "parcial",
+   "reason": "Acierta en que los trenes no garantizan llevar al viajero a su destino, pero omite lo esencial sobre las estaciones falsas en la selva y no menciona claramente que los itinerarios no se cumplen ni que no se sabe si pasarán.",
+   "prompt_tokens": 1489,
+   "completion_tokens": 469
+  },
+  "direct": {
+   "text": "En **“El guardagujas”**, de **Juan José Arreola**, el guardagujas le explica al forastero que el sistema ferroviario es absurdo e imprevisible: los trenes no necesariamente llegan cuando deben, no siempre se detienen, y aunque uno compre boleto para un destino, no hay garantía de llegar allí.\n\nTambién le advierte que las **estaciones** pueden ser engañosas o casi inútiles: a veces los trenes pasan sin parar, otras veces dejan a los pasajeros en lugares inesperados, y la empresa parece más interesada en mantener la ilusión del viaje que en asegurar que los pasajeros lleguen a su destino. En resumen, viajar en esos trenes implica aceptar la incertidumbre y adaptarse a cualquier rumbo.",
+   "verdict": "parcial",
+   "reason": "Explica correctamente la imprevisibilidad de los trenes y la falta de garantía sobre el destino, pero omite el detalle esencial de las estaciones falsas construidas en la selva con nombres de ciudades importantes.",
+   "prompt_tokens": 85,
+   "completion_tokens": 677
+  }
+ },
+ {
+  "q": "¿Qué encontró la hormiga que llevó al hormiguero un miligramo prodigioso?",
+  "title": "El prodigioso miligramo",
+  "author": "Juan José Arreola",
+  "answer": "Al llevarlo encontró la incomprensión: la arrestaron y procesaron, murió en prisión junto al miligramo, que brillaba; después la veneraron y el hormiguero se llenó de falsos miligramos hasta arruinarse.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el prodigioso miligramo (juan josé arreola)",
+   "a imagen y semejanza (mario benedetti)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "En **“El prodigioso miligramo”**, de **Juan José Arreola**, la hormiga encontró **un prodigioso miligramo**.",
+   "verdict": "incorrecto",
+   "reason": "La respuesta se limita a repetir que encontró el miligramo prodigioso, pero omite lo esencial de la referencia: que al llevarlo al hormiguero encontró incomprensión, arresto, prisión y una veneración posterior ruinosa.",
+   "prompt_tokens": 1490,
+   "completion_tokens": 95
+  },
+  "direct": {
+   "text": "La hormiga encontró un diminuto objeto extraordinario: el “prodigioso miligramo”, que llevó al hormiguero. Esto ocurre en el cuento **“El prodigioso miligramo”**, de **Juan José Arreola**.",
+   "verdict": "incorrecto",
+   "reason": "La respuesta candidata sólo identifica el miligramo prodigioso y omite lo esencial de la referencia: que al llevarlo encontró la incomprensión, fue arrestada, procesada y murió en prisión.",
+   "prompt_tokens": 84,
+   "completion_tokens": 3163
+  }
+ },
+ {
+  "q": "¿En qué cuento la vida de don Marcial transcurre al revés, de la muerte al nacimiento?",
+  "title": "Viaje a la semilla",
+  "author": "Alejo Carpentier",
+  "answer": "En «Viaje a la semilla», de Alejo Carpentier: la vida de don Marcial, Marqués de Capellanías, retrocede desde su lecho de muerte hasta antes de su nacimiento.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "viaje a la semilla (alejo carpentier)",
+   "la mano pegada (baldomero lillo)",
+   "quilapán (baldomero lillo)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **“Viaje a la semilla”**, de **Alejo Carpentier**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente el cuento «Viaje a la semilla» y a su autor, sin contradecir la referencia.",
+   "prompt_tokens": 1654,
+   "completion_tokens": 103
+  },
+  "direct": {
+   "text": "En el cuento **“Viaje a la semilla”**, de **Alejo Carpentier**, la vida de **don Marcial** transcurre al revés, desde la muerte hasta el nacimiento.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente el cuento «Viaje a la semilla» y a Alejo Carpentier, y expresa la idea esencial de que la vida de don Marcial transcurre al revés desde la muerte hasta el nacimiento.",
+   "prompt_tokens": 88,
+   "completion_tokens": 125
+  }
+ },
+ {
+  "q": "¿Con quién se encuentra Laura cuando su coche se detiene en el puente de Cuitzeo?",
+  "title": "La culpa es de los tlaxcaltecas",
+  "author": "Elena Garro",
+  "answer": "Con su primo marido, un guerrero indígena de la época de la Conquista, herido y derrotado, que avanzaba por la orilla del puente.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "cartas de mamá (julio cortázar)",
+   "después del almuerzo (julio cortázar)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente al decir “No lo sé” y no proporciona información de fondo.",
+   "prompt_tokens": 1399,
+   "completion_tokens": 91
+  },
+  "direct": {
+   "text": "En el cuento **“La culpa es de los tlaxcaltecas”**, de **Elena Garro**, Laura se encuentra en el puente de Cuitzeo con **su “primo marido”**, un **guerrero indígena mexica** que pertenece al tiempo de la Conquista.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que Laura se encuentra con su primo marido, un guerrero indígena de la época de la Conquista, sin contradecir la referencia.",
+   "prompt_tokens": 86,
+   "completion_tokens": 491
+  }
+ },
+ {
+  "q": "¿Qué libro le presta al fin la hija del dueño de la librería a la narradora?",
+  "title": "Felicidad clandestina",
+  "author": "Clarice Lispector",
+  "answer": "Las travesuras de Naricita, de Monteiro Lobato; se lo presta por orden de su madre, «todo el tiempo que quieras».",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "trenzas (maría luisa bombal)",
+   "ícaro (sergio pitol)",
+   "las fieras (roberto arlt)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona el libro prestado.",
+   "prompt_tokens": 1503,
+   "completion_tokens": 72
+  },
+  "direct": {
+   "text": "En el cuento **“Felicidad clandestina”**, de **Clarice Lispector**, la hija del dueño de la librería le presta al fin a la narradora el libro **_Las travesuras de Naricita_** —en portugués, **_Reinações de Narizinho_**, de **Monteiro Lobato**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente el libro prestado como Las travesuras de Naricita, de Monteiro Lobato, sin contradecir la referencia.",
+   "prompt_tokens": 84,
+   "completion_tokens": 977
+  }
+ },
+ {
+  "q": "¿Qué hace la gallina que la salva de ser cocinada para el almuerzo?",
+  "title": "Una gallina",
+  "author": "Clarice Lispector",
+  "answer": "Tras ser atrapada en los tejados, pone un huevo de puros nervios; la niña pide que no la maten y la familia la adopta (aunque años después se la comen).",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "solo para fumadores (julio ramón ribeyro)",
+   "la gallera (manuel a. alonso)",
+   "después del almuerzo (julio cortázar)",
+   "una gallina (clarice lispector)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente al decir “No lo sé” y no ofrece una respuesta de fondo.",
+   "prompt_tokens": 1262,
+   "completion_tokens": 90
+  },
+  "direct": {
+   "text": "En **“Una gallina”**, de **Clarice Lispector**, la gallina **pone un huevo**. Ese acto la salva momentáneamente de ser cocinada para el almuerzo, porque la familia decide perdonarle la vida.",
+   "verdict": "correcto",
+   "reason": "Identifica lo esencial: la gallina pone un huevo, lo que provoca que no la cocinen en ese momento.",
+   "prompt_tokens": 83,
+   "completion_tokens": 482
+  }
+ },
+ {
+  "q": "¿En qué localidad venden los hermanos Nilsen a Juliana Burgos, y a quién?",
+  "title": "La intrusa",
+  "author": "Jorge Luis Borges",
+  "answer": "La llevan en carreta hasta Morón y allí la venden a la patrona del prostíbulo.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "la intrusa (jorge luis borges)",
+   "el otro cielo (julio cortázar)",
+   "míster taylor (augusto monterroso)",
+   "el último rostro (álvaro mutis)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "En **Morón**, a **la patrona**. La información proviene de **“La intrusa”**, de **Jorge Luis Borges**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente la localidad, Morón, y a la compradora como la patrona, sin contradecir la referencia.",
+   "prompt_tokens": 1723,
+   "completion_tokens": 327
+  },
+  "direct": {
+   "text": "En **Morón**, los hermanos Nilsen venden a **Juliana Burgos** a **la dueña de un prostíbulo**.\n\nLa información proviene del cuento **“La intrusa”**, de **Jorge Luis Borges**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente la localidad, Morón, y que la venden a la patrona o dueña del prostíbulo.",
+   "prompt_tokens": 84,
+   "completion_tokens": 568
+  }
+ },
+ {
+  "q": "¿Cómo se llama el barco nórdico en cuyos marineros busca Emma Zunz a un hombre en el puerto, y de dónde es?",
+  "title": "Emma Zunz",
+  "author": "Jorge Luis Borges",
+  "answer": "El Nordstjärnan, de Malmö, que zarpaba esa noche del dique 3.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "semejante a la noche (alejo carpentier)",
+   "el camino de santiago (alejo carpentier)",
+   "las ménades (julio cortázar)",
+   "emma zunz (jorge luis borges)",
+   "el ahogado (baldomero lillo)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente de contestar y no proporciona el nombre ni el origen del barco.",
+   "prompt_tokens": 1570,
+   "completion_tokens": 126
+  },
+  "direct": {
+   "text": "En **“Emma Zunz”**, de **Jorge Luis Borges**, el barco se llama **Nordstjärnan** y es de **Malmö**, Suecia.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente el barco como Nordstjärnan y su procedencia como Malmö, sin contradecir la referencia.",
+   "prompt_tokens": 94,
+   "completion_tokens": 294
+  }
+ },
+ {
+  "q": "Según el minotauro que narra su propia vida, ¿cada cuánto tiempo y cuántos hombres entran en su casa?",
+  "title": "La casa de Asterión",
+  "author": "Jorge Luis Borges",
+  "answer": "Cada nueve años entran nueve hombres, a los que él mata («libera de todo mal»).",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "trenzas (maría luisa bombal)",
+   "el jorobadito (roberto arlt)",
+   "el matadero (esteban echeverría)",
+   "las fieras (roberto arlt)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente de contestar y no aporta la información solicitada.",
+   "prompt_tokens": 1403,
+   "completion_tokens": 72
+  },
+  "direct": {
+   "text": "En **“La casa de Asterión”**, de **Jorge Luis Borges**, el minotauro dice que **cada nueve años entran nueve hombres** en su casa.",
+   "verdict": "correcto",
+   "reason": "Responde correctamente que entran nueve hombres cada nueve años, que es lo esencial preguntado.",
+   "prompt_tokens": 92,
+   "completion_tokens": 212
+  }
+ },
+ {
+  "q": "En el sistema de numeración inventado por Ireneo Funes, ¿qué nombre usaba en lugar del número siete mil trece?",
+  "title": "Funes el memorioso",
+  "author": "Jorge Luis Borges",
+  "answer": "Decía «Máximo Pérez» (y «El Ferrocarril» para siete mil catorce).",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "funes el memorioso (jorge luis borges)",
+   "casa tomada (julio cortázar)",
+   "licantropía (enrique anderson imbert)",
+   "1833-1883 (manuel a. alonso)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En “Funes el memorioso”, de Jorge Luis Borges, Ireneo Funes decía “Máximo Pérez” en lugar de siete mil trece.",
+   "verdict": "correcto",
+   "reason": "La respuesta identifica correctamente que Funes usaba «Máximo Pérez» en lugar de siete mil trece.",
+   "prompt_tokens": 1448,
+   "completion_tokens": 75
+  },
+  "direct": {
+   "text": "En lugar del número **siete mil trece**, Ireneo Funes decía **“Máximo Pérez”**.\n\nEsto aparece en **“Funes el memorioso”**, cuento de **Jorge Luis Borges**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que Funes usaba el nombre «Máximo Pérez» en lugar de siete mil trece, sin contradecir la referencia.",
+   "prompt_tokens": 94,
+   "completion_tokens": 192
+  }
+ },
+ {
+  "q": "¿Cuánto dinero escondió Baltasar Espinosa en uno de sus libros, por desconfianza hacia los Gutres, en la estancia Los Álamos?",
+  "title": "El evangelio según Marcos",
+  "author": "Jorge Luis Borges",
+  "answer": "Doscientos cuarenta pesos.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el evangelio según marcos (jorge luis borges)",
+   "baltasar gérard [1555 1582] (juan josé arreola)",
+   "la muerte del estratega (álvaro mutis)",
+   "reunión (julio cortázar)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "Baltasar Espinosa escondió **doscientos cuarenta pesos** en uno de sus libros, según **“El evangelio según Marcos” de Jorge Luis Borges**.",
+   "verdict": "correcto",
+   "reason": "La respuesta incluye la cantidad esencial, doscientos cuarenta pesos, y no contradice la referencia.",
+   "prompt_tokens": 1676,
+   "completion_tokens": 69
+  },
+  "direct": {
+   "text": "Baltasar Espinosa escondió **doscientos pesos** en uno de sus libros.\n\nLa información proviene del cuento **“El evangelio según Marcos”**, de **Jorge Luis Borges**.",
+   "verdict": "incorrecto",
+   "reason": "La respuesta candidata afirma que fueron doscientos pesos, pero la referencia indica que escondió doscientos cuarenta pesos.",
+   "prompt_tokens": 97,
+   "completion_tokens": 563
+  }
+ },
+ {
+  "q": "¿Por qué viaja tanto en avión el anciano escritor al que investiga el narrador por encargo de un diputado que sospechaba de un tráfico de órganos de viejos?",
+  "title": "El caso de los viejitos voladores",
+  "author": "Adolfo Bioy Casares",
+  "answer": "Porque le dan premios; viaja a recibirlos (y teme no sobrevivir a otro premio).",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el caso de los viejitos voladores (adolfo bioy casares)",
+   "los inválidos (baldomero lillo)",
+   "ser polvo (santiago dabove)",
+   "las fieras (roberto arlt)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no aporta la causa indicada en la referencia: que viaja porque le dan premios.",
+   "prompt_tokens": 1562,
+   "completion_tokens": 99
+  },
+  "direct": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no aporta la causa indicada en la referencia: que viaja porque le dan premios.",
+   "prompt_tokens": 102,
+   "completion_tokens": 7259
+  }
+ },
+ {
+  "q": "¿Con qué le llena Hebe los bolsillos a su marido Pedro para que su cuerpo, que ha perdido peso, no se eleve?",
+  "title": "El leve Pedro",
+  "author": "Enrique Anderson Imbert",
+  "answer": "Con grandes tuercas, caños de plomo y piedras.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el leve pedro (enrique anderson imbert)",
+   "la puerta cerrada (josé donoso)",
+   "el registro (baldomero lillo)",
+   "el camino de santiago (alejo carpentier)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **“El leve Pedro”**, de **Enrique Anderson Imbert**, Hebe le llena los bolsillos a Pedro con **grandes tuercas, caños de plomo y piedras**.",
+   "verdict": "correcto",
+   "reason": "La respuesta incluye los tres elementos esenciales: grandes tuercas, caños de plomo y piedras, sin contradecir la referencia.",
+   "prompt_tokens": 1639,
+   "completion_tokens": 97
+  },
+  "direct": {
+   "text": "En **“El leve Pedro”**, de **Enrique Anderson Imbert**, Hebe le llena los bolsillos a Pedro con **piedras** para impedir que su cuerpo, cada vez más liviano, se eleve.",
+   "verdict": "parcial",
+   "reason": "Menciona correctamente las piedras, pero omite las grandes tuercas y los caños de plomo que también son parte esencial de la respuesta.",
+   "prompt_tokens": 94,
+   "completion_tokens": 568
+  }
+ },
+ {
+  "q": "En el hotel donde un huevo frito pasa de mano en mano entre varios cocineros y resulta delicioso, ¿qué regla culinaria establece el jefe de fiscalización?",
+  "title": "Tres cocineros y un huevo frito",
+  "author": "Macedonio Fernández",
+  "answer": "Que todo huevo frito debe ser trabajado en una tercera parte por un cocinero diferente (además de cambiar el nombre del hotel).",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el hombre del turbante verde (roberto arlt)",
+   "solo para fumadores (julio ramón ribeyro)",
+   "la luna roja (roberto arlt)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no ofrece la regla culinaria solicitada.",
+   "prompt_tokens": 1623,
+   "completion_tokens": 102
+  },
+  "direct": {
+   "text": "En **“El huevo frito”**, de **Julio Camba**, el jefe de fiscalización establece una regla irónica: **que el huevo frito debe prepararse pasando sucesivamente por las manos de varios cocineros**, porque así —según el caso observado— resulta perfecto o delicioso.",
+   "verdict": "parcial",
+   "reason": "Capta que el huevo debía pasar por varios cocineros, pero omite la condición específica de que cada huevo frito fuera trabajado en una tercera parte por un cocinero diferente.",
+   "prompt_tokens": 99,
+   "completion_tokens": 6281
+  }
+ },
+ {
+  "q": "En el monólogo escrito en habla porteña sobre una pelea de boxeo en el Luna Park, ¿en qué asalto gana Bonavena al brasileño Pires y de qué modo?",
+  "title": "El rulo",
+  "author": "Eduardo Gudiño Kieffer",
+  "answer": "Por nocaut técnico en el sexto round («nocauténico n´el sestorrún»).",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "después del almuerzo (julio cortázar)",
+   "el último rostro (álvaro mutis)",
+   "el camino de santiago (alejo carpentier)",
+   "1833-1883 (manuel a. alonso)",
+   "el paréntesis (rómulo gallegos)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta candidata se abstiene explícitamente y no proporciona el asalto ni el modo de la victoria.",
+   "prompt_tokens": 1548,
+   "completion_tokens": 72
+  },
+  "direct": {
+   "text": "En el monólogo, Bonavena le gana al brasileño Pires en el **quinto asalto**, por **nocaut técnico**.  \n\nLa referencia corresponde a la pelea narrada en el texto **“Bonavena-Pires”**, de **Leónidas Lamborghini**.",
+   "verdict": "parcial",
+   "reason": "Acierta que fue por nocaut técnico, pero se equivoca en el asalto: fue en el sexto round, no en el quinto.",
+   "prompt_tokens": 104,
+   "completion_tokens": 7312
+  }
+ },
+ {
+  "q": "¿Dónde muere el atorrante de la calle Corrientes, antiguo condiscípulo del narrador en el colegio del Salvador, y en qué noche?",
+  "title": "Telesforo Altamira",
+  "author": "Ricardo Güiraldes",
+  "answer": "Muere la célebre noche de la nevada en Buenos Aires, en los umbrales de la casa donde había entrado la familia gruesa del automóvil lujoso.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "un hombre muerto a puntapiés (pablo palacio)",
+   "el crepúsculo del diablo (rómulo gallegos)",
+   "las fieras (roberto arlt)",
+   "1833-1883 (manuel a. alonso)",
+   "acuérdate (juan rulfo)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente diciendo que no lo sabe y no aporta la información solicitada.",
+   "prompt_tokens": 1560,
+   "completion_tokens": 129
+  },
+  "direct": {
+   "text": "Muere en **los Corrales Viejos**, durante **la noche de los combates de junio de 1880** —la llamada “noche de los Corrales”—, en *La gran aldea* de **Lucio V. López**.",
+   "verdict": "incorrecto",
+   "reason": "La respuesta ubica la muerte en otro lugar y otra noche, contradiciendo que murió en los umbrales de la casa donde entró la familia gruesa durante la célebre noche de la nevada en Buenos Aires.",
+   "prompt_tokens": 98,
+   "completion_tokens": 5754
+  }
+ },
+ {
+  "q": "¿Cuántos ejemplares llevaba vendidos la primera edición de la novela cuyos gerundios suprimía el narrador antes de arrastrarse bajo el escritorio de su compañera del walkman?",
+  "title": "El corrector",
+  "author": "Andrés Rivera",
+  "answer": "Quince mil ejemplares.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el corrector (andrés rivera)",
+   "las ménades (julio cortázar)",
+   "después del almuerzo (julio cortázar)",
+   "trenzas (maría luisa bombal)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "Llevaba vendidos **quince mil ejemplares** de su primera edición, según **_El corrector_**, de **Andrés Rivera**.",
+   "verdict": "correcto",
+   "reason": "La respuesta contiene el dato esencial de la referencia: quince mil ejemplares vendidos de la primera edición.",
+   "prompt_tokens": 1614,
+   "completion_tokens": 66
+  },
+  "direct": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona la cifra de quince mil ejemplares.",
+   "prompt_tokens": 104,
+   "completion_tokens": 3633
+  }
+ },
+ {
+  "q": "¿Dónde termina encerrado Octaviano Crivellini, el copista de estatuas acosado por el niño Tirso en la pensión de Mme. Renard?",
+  "title": "El vendedor de estatuas",
+  "author": "Silvina Ocampo",
+  "answer": "En el gran armario del fondo del corralón, donde se refugiaba; alguien le da dos vueltas a la llave y queda sin aire.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "la muerte (mario benedetti)",
+   "el vendedor de estatuas (silvina ocampo)",
+   "las fieras (roberto arlt)",
+   "las ménades (julio cortázar)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no ofrece una respuesta de fondo.",
+   "prompt_tokens": 1611,
+   "completion_tokens": 74
+  },
+  "direct": {
+   "text": "Octaviano Crivellini termina encerrado **dentro de una estatua**. El episodio pertenece a *El ladrón de niños*, de **Jules Supervielle**.",
+   "verdict": "incorrecto",
+   "reason": "La respuesta afirma que queda encerrado dentro de una estatua, pero la referencia indica que termina encerrado en el gran armario del fondo del corralón.",
+   "prompt_tokens": 102,
+   "completion_tokens": 14546
+  }
+ },
+ {
+  "q": "En el armario de nogal cuyas habitantes se volvieron escritoras por la inacción y el aburrimiento, ¿cómo se titula la novela que escribió la novelista con gafas tras diez años de trabajo?",
+  "title": "Las muñecas",
+  "author": "Juan Rodolfo Wilcock",
+  "answer": "Huelga.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "las muñecas (juan rodolfo wilcock)",
+   "trenzas (maría luisa bombal)",
+   "semejante a la noche (alejo carpentier)",
+   "ícaro (sergio pitol)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **“Las muñecas”**, de **Juan Rodolfo Wilcock**, la novela se titula **Huelga**.",
+   "verdict": "correcto",
+   "reason": "La respuesta identifica correctamente que la novela se titula «Huelga» y no contradice la referencia.",
+   "prompt_tokens": 1422,
+   "completion_tokens": 68
+  },
+  "direct": {
+   "text": "La novela se titulaba *Los misterios del armario*. Aparece en *Historia de la señorita Grano de Polvo, bailarina del sol*, de Teresa de la Parra.",
+   "verdict": "incorrecto",
+   "reason": "La respuesta candidata da un título distinto al correcto, que es «Huelga», e inventa información no respaldada por la evidencia.",
+   "prompt_tokens": 109,
+   "completion_tokens": 8716
+  }
+ },
+ {
+  "q": "El narrador vive toda una vida (boda en Ramos Mejía, mellizos en Liniers) durante un solo viaje por el Ferrocarril Oeste. ¿En qué estación se entera de la muerte de su esposa?",
+  "title": "El tren",
+  "author": "Santiago Dabove",
+  "answer": "En Flores, donde el convoy quedó detenido por un choque; allí recibe la noticia y la entierran en el cementerio de Flores.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "ícaro (sergio pitol)",
+   "después del almuerzo (julio cortázar)",
+   "licantropía (rubén bareiro saguier)",
+   "las fieras (roberto arlt)",
+   "el guardagujas (juan josé arreola)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente de contestar y no proporciona la estación solicitada.",
+   "prompt_tokens": 1575,
+   "completion_tokens": 95
+  },
+  "direct": {
+   "text": "Se entera en la estación **Flores**.\n\nLa escena pertenece al cuento **«El tren»**, de **Santiago Dabove**.",
+   "verdict": "correcto",
+   "reason": "Responde correctamente que se entera en la estación de Flores, que es lo esencial solicitado.",
+   "prompt_tokens": 113,
+   "completion_tokens": 6023
+  }
+ },
+ {
+  "q": "¿Cómo mata la tía Pepa Mondelli a su gato negro después de que este devoró uno de sus pollitos?",
+  "title": "El gato cocido",
+  "author": "Roberto Arlt",
+  "answer": "Lo mete en una lata con agua, ata la tapa con alambre y la pone sobre el brasero, cociéndolo vivo.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el gato cocido (roberto arlt)",
+   "macario (juan rulfo)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **“El gato cocido” de Roberto Arlt**, la tía Pepa mata al gato negro metiéndolo bruscamente en un tacho, atando la tapa con alambres, colocando la lata sobre el brasero y avivando el fuego hasta cocerlo vivo.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial: mete al gato en un tacho o lata, ata la tapa con alambres, lo pone sobre el brasero y aviva el fuego para cocerlo vivo.",
+   "prompt_tokens": 1549,
+   "completion_tokens": 87
+  },
+  "direct": {
+   "text": "En **“Los venenos”**, de **Julio Cortázar**, la tía Pepa Mondelli mata a su gato negro **envenenándolo**, después de que el gato se comió uno de sus pollitos.",
+   "verdict": "incorrecto",
+   "reason": "Afirma que lo mata envenenándolo, pero la referencia indica que lo encierra en una lata con agua y lo pone sobre el brasero, cociéndolo vivo.",
+   "prompt_tokens": 91,
+   "completion_tokens": 6785
+  }
+ },
+ {
+  "q": "¿Qué nombre lleva pintado el bote rojo que Chino Pérez trae a remolque a la isleta donde caza nutrias con Renato?",
+  "title": "Los nutrieros",
+  "author": "Rodolfo Walsh",
+  "answer": "«San Felipe», en letras blancas en el costado de babor.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "los nutrieros (rodolfo walsh)",
+   "el hallazgo (baldomero lillo)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona el nombre del bote, que era «San Felipe».",
+   "prompt_tokens": 1700,
+   "completion_tokens": 126
+  },
+  "direct": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona el nombre del bote, que era «San Felipe».",
+   "prompt_tokens": 94,
+   "completion_tokens": 3519
+  }
+ },
+ {
+  "q": "Tras quince días de inundación en la Buenos Aires rosista durante la cuaresma, ¿cuántos novillos llegan por el paso de Burgos para el abasto?",
+  "title": "El matadero",
+  "author": "Esteban Echeverría",
+  "answer": "Una tropa de cincuenta novillos gordos, el decimosexto día de la carestía.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el matadero (esteban echeverría)",
+   "el camino de santiago (alejo carpentier)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **_El matadero_**, de **Esteban Echeverría**, llegan **cincuenta novillos gordos** por el paso de Burgos.",
+   "verdict": "correcto",
+   "reason": "La respuesta identifica correctamente que llegan cincuenta novillos gordos por el paso de Burgos, que es lo esencial preguntado.",
+   "prompt_tokens": 1528,
+   "completion_tokens": 117
+  },
+  "direct": {
+   "text": "Llegan **cincuenta novillos** para el abasto.\n\nLa información proviene de **“El matadero”**, de **Esteban Echeverría**.",
+   "verdict": "correcto",
+   "reason": "La respuesta da el dato esencial solicitado: llegan cincuenta novillos, sin contradecir la referencia.",
+   "prompt_tokens": 101,
+   "completion_tokens": 449
+  }
+ },
+ {
+  "q": "¿Qué edad tiene la niña del matrimonio que vive en una casita de madera junto a tres líneas férreas, al pie de una montaña empinada, y de la que sus padres saben que algún día la matará un tren?",
+  "title": "La hija del guardaagujas",
+  "author": "Vicente Huidobro",
+  "answer": "Tiene tres años.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "la hija del guardaagujas (vicente huidobro)",
+   "las fieras (roberto arlt)",
+   "el registro (baldomero lillo)",
+   "semejante a la noche (alejo carpentier)",
+   "trenzas (maría luisa bombal)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta candidata se abstiene explícitamente y no proporciona la edad de la niña, que es tres años.",
+   "prompt_tokens": 1520,
+   "completion_tokens": 59
+  },
+  "direct": {
+   "text": "Tiene **tres años**.  \nEl dato aparece en el cuento **“El conductor del rápido”**, de **Horacio Quiroga**.",
+   "verdict": "correcto",
+   "reason": "La respuesta indica correctamente que la niña tiene tres años, que es lo esencial de la referencia.",
+   "prompt_tokens": 112,
+   "completion_tokens": 5447
+  }
+ },
+ {
+  "q": "¿Qué descuento le recomienda el padrino moribundo a su ahijado para vender los muñecos de sacerdote y religiosas que difícilmente se venden en la tienda?",
+  "title": "La tienda de muñecos",
+  "author": "Julio Garmendia",
+  "answer": "Le recomienda ofrecerlos con el diez por ciento de descuento, que equivaldría a los diezmos.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "la tienda de muñecos (julio garmendia)",
+   "conducta en los velorios (julio cortázar)",
+   "semejante a la noche (alejo carpentier)",
+   "míster taylor (augusto monterroso)",
+   "el camino de santiago (alejo carpentier)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente diciendo que no lo sabe y no proporciona el descuento recomendado.",
+   "prompt_tokens": 1507,
+   "completion_tokens": 59
+  },
+  "direct": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente diciendo que no lo sabe y no proporciona el descuento recomendado.",
+   "prompt_tokens": 98,
+   "completion_tokens": 1886
+  }
+ },
+ {
+  "q": "¿Qué le grita el loro Jesusito a Andrés Erre en el momento en que este se ahorca de una viga, tras descubrir la traición de su alter ego?",
+  "title": "El difunto y yo",
+  "author": "Julio Garmendia",
+  "answer": "Le grita, como solía hacerlo: «¡Adiós, Doctor!».",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el difunto y yo (julio garmendia)",
+   "el camino de santiago (alejo carpentier)",
+   "el crepúsculo del diablo (rómulo gallegos)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **_El difunto y yo_**, de **Julio Garmendia**, el loro Jesusito le grita:\n\n**«¡Adiós, Doctor!»**",
+   "verdict": "correcto",
+   "reason": "La respuesta candidata incluye la frase esencial que el loro grita: «¡Adiós, Doctor!», sin contradecir la referencia.",
+   "prompt_tokens": 1499,
+   "completion_tokens": 104
+  },
+  "direct": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona el grito «¡Adiós, Doctor!».",
+   "prompt_tokens": 101,
+   "completion_tokens": 4137
+  }
+ },
+ {
+  "q": "¿Dónde va a caer el gnomo de cuero irlandés que vive sobre la balanza de cartas del escritorio de un poeta cuando, furioso, intenta echar a los dos menestriles que fueron sus compañeros?",
+  "title": "El genio del pesacartas",
+  "author": "Teresa de la Parra",
+  "answer": "Resbala del platillo y cae al fondo del tintero, que se lo traga; luego el poeta lo saca y lo guarda en el fondo de una gaveta.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "las ménades (julio cortázar)",
+   "trenzas (maría luisa bombal)",
+   "el genio del pesacartas (teresa de la parra)",
+   "los inválidos (baldomero lillo)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "Cae en el “pozo negro”, es decir, en el tintero. La información proviene de **_El genio del pesacartas_**, de **Teresa de la Parra**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que cae en el tintero, que es lo esencial preguntado, sin contradecir la referencia.",
+   "prompt_tokens": 1579,
+   "completion_tokens": 200
+  },
+  "direct": {
+   "text": "Cae **en el tintero**. La referencia corresponde al relato **“Puck” de Rubén Darío**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que cae en el tintero, que es lo esencial preguntado, sin contradecir la referencia.",
+   "prompt_tokens": 109,
+   "completion_tokens": 7279
+  }
+ },
+ {
+  "q": "¿Qué piden en la confitería el hombre de la quemadura junto a la boca y la mujer del pómulo hundido después de conocerse en la cola del cine?",
+  "title": "La noche de los feos",
+  "author": "Mario Benedetti",
+  "answer": "Piden dos helados (y, hora y media después, dos cafés para justificar su permanencia).",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el charlestón (josé donoso)",
+   "las fieras (roberto arlt)",
+   "después del almuerzo (julio cortázar)",
+   "el camino de santiago (alejo carpentier)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona la información solicitada sobre lo que pidieron.",
+   "prompt_tokens": 1445,
+   "completion_tokens": 109
+  },
+  "direct": {
+   "text": "Piden **dos cafés** en la confitería.  \nEsto ocurre en el cuento **«La noche de los feos»**, de **Mario Benedetti**.",
+   "verdict": "parcial",
+   "reason": "Menciona los dos cafés que pidieron más tarde, pero omite lo principal: que al sentarse pidieron dos helados.",
+   "prompt_tokens": 102,
+   "completion_tokens": 1418
+  }
+ },
+ {
+  "q": "Al final, ¿en qué pocillo pide tomar el café José Claudio, el marido ciego de Mariana, cuando ella se lo iba a servir en el verde?",
+  "title": "Los pocillos",
+  "author": "Mario Benedetti",
+  "answer": "Pide tomar en el pocillo rojo, el que Mariana había reservado para ella.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "los pocillos (mario benedetti)",
+   "el otro cielo (julio cortázar)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "Al final, José Claudio pide tomar el café en el pocillo rojo. Esto ocurre en **_Los pocillos_**, de **Mario Benedetti**.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial de la referencia: José Claudio pide tomar el café en el pocillo rojo, sin contradecirla.",
+   "prompt_tokens": 1477,
+   "completion_tokens": 72
+  },
+  "direct": {
+   "text": "En **“Los pocillos”**, de **Mario Benedetti**, José Claudio pide tomar el café **en el pocillo de Alberto**, no en el verde.",
+   "verdict": "incorrecto",
+   "reason": "La respuesta no identifica el pocillo rojo reservado para Mariana y afirma que era el de Alberto, contradiciendo la referencia.",
+   "prompt_tokens": 98,
+   "completion_tokens": 2626
+  }
+ },
+ {
+  "q": "¿Cuánto tiempo llevaba el viejito jorobado del cartapacio acudiendo cada día a pedir audiencia con el Señor X, Director General de la Confederación Internacional de la Producción Universal?",
+  "title": "El acto libre",
+  "author": "José Edwards",
+  "answer": "Llevaba ocho meses viniendo día a día.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "trenzas (maría luisa bombal)",
+   "las ménades (julio cortázar)",
+   "los inválidos (baldomero lillo)",
+   "el matadero (esteban echeverría)",
+   "la compuerta número 12 (baldomero lillo)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona el dato esencial de que llevaba ocho meses acudiendo cada día.",
+   "prompt_tokens": 1495,
+   "completion_tokens": 57
+  },
+  "direct": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona el dato esencial de que llevaba ocho meses acudiendo cada día.",
+   "prompt_tokens": 107,
+   "completion_tokens": 4669
+  }
+ },
+ {
+  "q": "¿Qué hace que Carlos y Ramón guarden las armas cuando están a punto de batirse a muerte por la herencia de su hermana Luisana?",
+  "title": "El piano viejo",
+  "author": "Rómulo Gallegos",
+  "answer": "Oyen sonar de pronto una nota del piano cerrado: la tecla sobre la que había quedado apoyado el dedo de Luisana al morir, que sonaba a destiempo.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el piano viejo (rómulo gallegos)",
+   "trenzas (maría luisa bombal)",
+   "reunión (julio cortázar)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no ofrece una explicación de qué los hace guardar las armas.",
+   "prompt_tokens": 1877,
+   "completion_tokens": 453
+  },
+  "direct": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no ofrece una explicación de qué los hace guardar las armas.",
+   "prompt_tokens": 94,
+   "completion_tokens": 3115
+  }
+ },
+ {
+  "q": "¿Qué decía el cartel de la tienda tranquila y limpia que sedujo al narrador de niño cuando acompañó a su madre a buscar unos cubiertos robados a una casa de empeños?",
+  "title": "China",
+  "author": "José Donoso",
+  "answer": "Decía «Zurcidor Japonés».",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el perfil (baldomero lillo)",
+   "la compuerta número 12 (baldomero lillo)",
+   "semejante a la noche (alejo carpentier)",
+   "trenzas (maría luisa bombal)",
+   "los inválidos (baldomero lillo)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona el texto del cartel, que era «Zurcidor Japonés».",
+   "prompt_tokens": 1402,
+   "completion_tokens": 70
+  },
+  "direct": {
+   "text": "El cartel decía: **«Se alquilan libros»**.\n\nLa anécdota aparece en un texto autobiográfico de **Eduardo Galeano**, recogido en *El libro de los abrazos*.",
+   "verdict": "incorrecto",
+   "reason": "La respuesta contradice la referencia, ya que el cartel decía «Zurcidor Japonés», no «Se alquilan libros».",
+   "prompt_tokens": 103,
+   "completion_tokens": 3153
+  }
+ },
+ {
+  "q": "¿Cómo se llama la isla griega que el steward Marini contempla por la ventanilla en sus vuelos de la línea Roma-Teherán?",
+  "title": "La isla a mediodía",
+  "author": "Julio Cortázar",
+  "answer": "Se llama Xiros (no Horos, como él creyó al principio).",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "la isla a mediodía (julio cortázar)",
+   "tragedia de un rostro (luis vidales)",
+   "el camino de santiago (alejo carpentier)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "La isla se llama **Xiros**, según **_La isla a mediodía_**, de **Julio Cortázar**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente la isla como Xiros y no contradice la referencia.",
+   "prompt_tokens": 1570,
+   "completion_tokens": 68
+  },
+  "direct": {
+   "text": "La isla se llama **Xiros**. Aparece en el cuento **“La isla a mediodía”**, de **Julio Cortázar**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente la isla como Xiros y no contradice la referencia.",
+   "prompt_tokens": 95,
+   "completion_tokens": 215
+  }
+ },
+ {
+  "q": "¿Qué firma llevaba el primer papelito, atado a una tuerca, que cayó del tren frente a Leticia, Holanda y la narradora mientras jugaban a las estatuas junto a las vías?",
+  "title": "Final del juego",
+  "author": "Julio Cortázar",
+  "answer": "Lo firmaba «Ariel B.», que decía viajar en la tercera ventanilla del segundo coche.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "final del juego (julio cortázar)",
+   "después del almuerzo (julio cortázar)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "El papelito estaba firmado: “Ariel B.”, en **_Final del juego_**, de **Julio Cortázar**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que el papelito estaba firmado por “Ariel B.” y no contradice la referencia.",
+   "prompt_tokens": 1395,
+   "completion_tokens": 94
+  },
+  "direct": {
+   "text": "El primer papelito llevaba la firma **“Ariel B.”**.  \n\nProviene del cuento **“Final del juego”**, de **Julio Cortázar**.",
+   "verdict": "correcto",
+   "reason": "Responde correctamente que la firma del primer papelito era «Ariel B.» y no contradice la referencia.",
+   "prompt_tokens": 107,
+   "completion_tokens": 557
+  }
+ },
+ {
+  "q": "¿En qué ciudad y en qué lugar se encuentra Alina Reyes con la mujer harapienta con la que se abraza durante su viaje de bodas?",
+  "title": "Lejana",
+  "author": "Julio Cortázar",
+  "answer": "En Budapest, en el centro de un puente nevado sobre el Danubio.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "trenzas (maría luisa bombal)",
+   "las fieras (roberto arlt)",
+   "semejante a la noche (alejo carpentier)",
+   "el camino de santiago (alejo carpentier)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona la ciudad ni el lugar del encuentro.",
+   "prompt_tokens": 1494,
+   "completion_tokens": 74
+  },
+  "direct": {
+   "text": "En **Budapest**, en **un puente sobre el río Danubio**, Alina Reyes se encuentra con la mujer harapienta y se abraza con ella.\n\nLa escena pertenece al cuento **“Lejana”**, de **Julio Cortázar**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente la ciudad, Budapest, y el lugar esencial del encuentro, un puente sobre el Danubio, sin contradecir la referencia.",
+   "prompt_tokens": 96,
+   "completion_tokens": 389
+  }
+ },
+ {
+  "q": "¿Por qué rompe a llorar la viuda de los ojos ahumados cuando el narrador empieza a probar el piano en la reunión donde había leído un cuento?",
+  "title": "Nadie encendía las lámparas",
+  "author": "Felisberto Hernández",
+  "answer": "Porque desde la muerte de su esposo no quería oír música.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "las ménades (julio cortázar)",
+   "conducta en los velorios (julio cortázar)",
+   "las fieras (roberto arlt)",
+   "nadie encendía las lámparas (felisberto hernández)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente de contestar y no aporta la causa indicada en la referencia.",
+   "prompt_tokens": 1538,
+   "completion_tokens": 94
+  },
+  "direct": {
+   "text": "La viuda de los ojos ahumados rompe a llorar porque el sonido del piano le despierta un recuerdo doloroso: le recuerda a su marido muerto. La música, más que la lectura del cuento, toca una zona íntima de su duelo.\n\nEsto ocurre en **“Nadie encendía las lámparas”**, de **Felisberto Hernández**.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial: llora porque la música del piano está ligada al duelo por la muerte de su esposo y no quería oír música desde entonces.",
+   "prompt_tokens": 98,
+   "completion_tokens": 596
+  }
+ },
+ {
+  "q": "¿Qué marca de medias vendía el concertista de piano convertido en corredor comercial que se ponía a llorar en las tiendas para vender más?",
+  "title": "El cocodrilo",
+  "author": "Felisberto Hernández",
+  "answer": "Medias «Ilusión»; él había ganado el segundo premio con el lema «¿Quién no acaricia, hoy, una media Ilusión?».",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "las ménades (julio cortázar)",
+   "el cocodrilo (felisberto hernández)",
+   "mi primer concierto (felisberto hernández)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona la marca de medias solicitada.",
+   "prompt_tokens": 1503,
+   "completion_tokens": 80
+  },
+  "direct": {
+   "text": "Vendía **medias Kayser**. La referencia aparece en **_La tía Julia y el escribidor_**, de **Mario Vargas Llosa**.",
+   "verdict": "incorrecto",
+   "reason": "La marca esencial era medias «Ilusión», pero la respuesta candidata afirma incorrectamente que eran medias Kayser.",
+   "prompt_tokens": 94,
+   "completion_tokens": 8045
+  }
+ },
+ {
+  "q": "¿Por qué derribaron el gomero que estaba pegado a la ventana del cuarto de vestir de Brígida, la joven esposa de Luis?",
+  "title": "El árbol",
+  "author": "María Luisa Bombal",
+  "answer": "Porque sus raíces levantaban las baldosas de la acera y la comisión de vecinos hizo que lo abatieran.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el árbol (maría luisa bombal)",
+   "trenzas (maría luisa bombal)",
+   "semejante a la noche (alejo carpentier)",
+   "el otro cielo (julio cortázar)",
+   "el camino de santiago (alejo carpentier)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona la causa del derribo del gomero.",
+   "prompt_tokens": 1864,
+   "completion_tokens": 181
+  },
+  "direct": {
+   "text": "En **“El árbol”**, de **María Luisa Bombal**, derribaron el gomero porque **sus raíces estaban levantando la acera/vereda** y “molestaba”; por eso lo mandaron cortar.",
+   "verdict": "correcto",
+   "reason": "Contiene la causa esencial: las raíces del gomero levantaban la acera/vereda, por lo que lo mandaron cortar, sin contradecir la referencia.",
+   "prompt_tokens": 95,
+   "completion_tokens": 846
+  }
+ },
+ {
+  "q": "¿Cómo se asegura el viejo minero de que su hijo Pablo, de ocho años, no abandone la puerta de ventilación que debe manejar en el fondo de la mina?",
+  "title": "La compuerta número 12",
+  "author": "Baldomero Lillo",
+  "answer": "Lo ata por la cintura con una cuerda delgada y fuerte cuyo otro extremo amarra a un grueso perno incrustado en la roca.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "juan fariña (baldomero lillo)",
+   "la compuerta número 12 (baldomero lillo)",
+   "los inválidos (baldomero lillo)",
+   "el chiflón del diablo (baldomero lillo)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente de contestar y no aporta la información esencial sobre la cuerda y el perno.",
+   "prompt_tokens": 1501,
+   "completion_tokens": 282
+  },
+  "direct": {
+   "text": "En **“La compuerta número 12”**, de **Baldomero Lillo**, el viejo minero se asegura de que su hijo **Pablo** no abandone su puesto **atándolo con una cuerda por la cintura** a la puerta o al lugar donde debe manejar la compuerta de ventilación, para que no pueda escapar del fondo de la mina.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial: el viejo minero ata a Pablo por la cintura con una cuerda para impedir que abandone su puesto, aunque no precise que el otro extremo va a un perno en la roca.",
+   "prompt_tokens": 100,
+   "completion_tokens": 514
+  }
+ },
+ {
+  "q": "¿Qué hace María de los Ángeles después de ver subir del pozo el cadáver de su hijo, el joven minero apodado Cabeza de Cobre, muerto en un derrumbe?",
+  "title": "El Chiflón del Diablo",
+  "author": "Baldomero Lillo",
+  "answer": "Salva la barrera y se arroja al pozo de la mina, desapareciendo en el abismo.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el chiflón del diablo (baldomero lillo)",
+   "el camino de santiago (alejo carpentier)",
+   "juan fariña (baldomero lillo)",
+   "los inválidos (baldomero lillo)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta candidata se abstiene explícitamente de responder al decir que no lo sabe.",
+   "prompt_tokens": 1512,
+   "completion_tokens": 131
+  },
+  "direct": {
+   "text": "En **“El chiflón del Diablo”**, de **Baldomero Lillo**, María de los Ángeles, enloquecida por el dolor al ver el cadáver de su hijo **Cabeza de Cobre**, **se arroja al pozo de la mina**, suicidándose.",
+   "verdict": "correcto",
+   "reason": "La respuesta indica lo esencial: María de los Ángeles, tras ver el cadáver de su hijo, se arroja al pozo de la mina.",
+   "prompt_tokens": 103,
+   "completion_tokens": 939
+  }
+ },
+ {
+  "q": "¿Qué le pasó a la vela que Natalia puso entre las manos de Tanilo Santos cuando él rezaba arrodillado frente a la Virgen?",
+  "title": "Talpa",
+  "author": "Juan Rulfo",
+  "answer": "Se apagó: a Tanilo se le cayó una lágrima grande que apagó la vela, pero él no se dio cuenta y siguió rezando con la vela apagada.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "talpa (juan rulfo)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **“Talpa” de Juan Rulfo**, a Tanilo Santos se le cayó una lágrima grande mientras rezaba, y esa lágrima **apagó la vela** que Natalia le había puesto entre las manos. Él no se dio cuenta y siguió rezando con la vela apagada.",
+   "verdict": "correcto",
+   "reason": "Incluye lo esencial: la lágrima de Tanilo apagó la vela que Natalia le había puesto entre las manos y él siguió rezando sin darse cuenta.",
+   "prompt_tokens": 1522,
+   "completion_tokens": 110
+  },
+  "direct": {
+   "text": "La vela que Natalia puso entre las manos de Tanilo Santos **se le apagó** mientras él rezaba arrodillado frente a la Virgen.\n\nEsto ocurre en el cuento **“Talpa”**, de **Juan Rulfo**, incluido en *El llano en llamas*.",
+   "verdict": "correcto",
+   "reason": "La respuesta indica lo esencial: que la vela se apagó, sin contradecir la referencia.",
+   "prompt_tokens": 94,
+   "completion_tokens": 580
+  }
+ },
+ {
+  "q": "¿Qué le manda hacer su madrina al muchacho siempre hambriento, al que Felipa da de comer, mientras está sentado junto a la alcantarilla?",
+  "title": "Macario",
+  "author": "Juan Rulfo",
+  "answer": "Que espere con una tabla en la mano y mate a tablazos a las ranas que salgan, porque su croar no dejó dormir a la madrina.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "macario (juan rulfo)",
+   "la puerta cerrada (josé donoso)",
+   "el camino de santiago (alejo carpentier)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente de contestar y no proporciona ninguna información sobre lo que la madrina le manda hacer.",
+   "prompt_tokens": 1462,
+   "completion_tokens": 91
+  },
+  "direct": {
+   "text": "En el cuento **“Macario”**, de **Juan Rulfo**, su madrina le manda al muchacho que se siente junto a la alcantarilla con una tabla en la mano para **aplastar a tablazos a las ranas** que salgan, porque su croar no la deja dormir.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial: la madrina le ordena sentarse junto a la alcantarilla con una tabla para matar/aplastar a tablazos a las ranas que salen porque su croar no la deja dormir.",
+   "prompt_tokens": 98,
+   "completion_tokens": 353
+  }
+ },
+ {
+  "q": "¿Dónde vio por primera vez el narrador la araña venenosa que después soltó en su departamento, y con quién estaba?",
+  "title": "La migala",
+  "author": "Juan José Arreola",
+  "answer": "En una barraca inmunda de una feria callejera, a la que había entrado con Beatriz; días después volvió a comprársela al saltimbanqui.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "después del almuerzo (julio cortázar)",
+   "trenzas (maría luisa bombal)",
+   "el registro (baldomero lillo)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona la ubicación ni la compañía del narrador.",
+   "prompt_tokens": 1457,
+   "completion_tokens": 45
+  },
+  "direct": {
+   "text": "En **“La migala”**, de **Juan José Arreola**, el narrador vio por primera vez la araña venenosa en **una barraca inmunda de una feria callejera**, y estaba con **Beatriz**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que la vio por primera vez en una barraca inmunda de una feria callejera y que estaba con Beatriz.",
+   "prompt_tokens": 92,
+   "completion_tokens": 642
+  }
+ },
+ {
+  "q": "En el anuncio de Arreola sobre el aparato que convierte en electricidad los movimientos de los niños, ¿qué casa fabricante lo garantiza y dónde está?",
+  "title": "Baby H. P.",
+  "author": "Juan José Arreola",
+  "answer": "La casa J. P. Mansfield & Sons, de Atlanta, Ill.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "los bandidos de uad djuari (roberto arlt)",
+   "el jorobadito (roberto arlt)",
+   "el difunto y yo (julio garmendia)",
+   "semejante a la noche (alejo carpentier)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona la casa fabricante ni su ubicación.",
+   "prompt_tokens": 1474,
+   "completion_tokens": 56
+  },
+  "direct": {
+   "text": "En **«Baby H.P.»**, de **Juan José Arreola**, el aparato está garantizado por la casa fabricante **General Electric**, ubicada en **Schenectady, Nueva York**.",
+   "verdict": "incorrecto",
+   "reason": "La respuesta inventa una casa fabricante y ubicación distintas a las indicadas en la referencia: J. P. Mansfield & Sons, de Atlanta, Ill.",
+   "prompt_tokens": 95,
+   "completion_tokens": 4248
+  }
+ },
+ {
+  "q": "¿Cómo presenta el profesor Fombona al joven poeta Feijoo ante Marcel Bataillon?",
+  "title": "Obras completas",
+  "author": "Augusto Monterroso",
+  "answer": "Como especialista en Unamuno que prepara la edición crítica de sus Obras completas.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "obras completas (augusto monterroso)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En *Obras completas*, de Augusto Monterroso, Fombona presenta a Feijoo ante Marcel Bataillon diciendo: “Maestro, quiero presentarle a Feijoo. Es especialista en Unamuno; prepara la edición crítica de sus Obras completas.”",
+   "verdict": "correcto",
+   "reason": "Incluye exactamente que Feijoo es especialista en Unamuno y prepara la edición crítica de sus Obras completas, sin contradecir la referencia.",
+   "prompt_tokens": 1492,
+   "completion_tokens": 123
+  },
+  "direct": {
+   "text": "Lo presenta como un joven poeta Feijoo “descendiente del padre Feijoo”, es decir, del famoso Benito Jerónimo Feijoo. La presentación tiene un tono irónico/paradójico, porque el “padre Feijoo” era monje benedictino.",
+   "verdict": "incorrecto",
+   "reason": "No menciona lo esencial de la presentación —que Feijoo es especialista en Unamuno y prepara la edición crítica de sus Obras completas— y añade una información distinta no respaldada por la evidencia dada.",
+   "prompt_tokens": 83,
+   "completion_tokens": 6796
+  }
+ },
+ {
+  "q": "¿Qué palabras estaban grabadas en la alianza que apareció cosida a la camisa de Adrián Cadena, a la altura del corazón?",
+  "title": "El anillo",
+  "author": "Elena Garro",
+  "answer": "\"Adrián y Severina gloriosos\".",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el anillo (elena garro)",
+   "trenzas (maría luisa bombal)",
+   "semejante a la noche (alejo carpentier)",
+   "el camino de santiago (alejo carpentier)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **“El anillo”**, de **Elena Garro**, la alianza tenía grabadas las palabras: **“Adrián y Severina gloriosos”**.",
+   "verdict": "correcto",
+   "reason": "La respuesta incluye exactamente las palabras grabadas en la alianza: “Adrián y Severina gloriosos”.",
+   "prompt_tokens": 1438,
+   "completion_tokens": 83
+  },
+  "direct": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no proporciona las palabras grabadas en la alianza.",
+   "prompt_tokens": 92,
+   "completion_tokens": 5961
+  }
+ },
+ {
+  "q": "¿Cómo acaban la narradora y Guadalupe con el ser de ojos amarillos que el marido llevó a vivir a la casa?",
+  "title": "El huésped",
+  "author": "Amparo Dávila",
+  "answer": "Aprovechando un viaje del marido, lo encierran en el cuarto de la esquina clavando tablas en la puerta, y muere tras unas dos semanas sin aire, luz ni alimento.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el huésped (amparo dávila)",
+   "las ménades (julio cortázar)",
+   "trenzas (maría luisa bombal)",
+   "las fieras (roberto arlt)",
+   "después del almuerzo (julio cortázar)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente al decir \"No lo sé\" y no aporta una explicación de cómo acaban con el ser.",
+   "prompt_tokens": 1400,
+   "completion_tokens": 97
+  },
+  "direct": {
+   "text": "En **“El huésped”**, de **Amparo Dávila**, la narradora y Guadalupe aprovechan una ausencia del marido para **encerrar al ser en su cuarto**. Cierran la puerta, la aseguran con tablas y clavos, y lo dejan allí **sin comida ni agua** hasta que muere. Luego, cuando vuelve el marido, le dicen que “el huésped” murió.",
+   "verdict": "correcto",
+   "reason": "La respuesta recoge lo esencial: aprovechan la ausencia del marido, lo encierran y clausuran la puerta con tablas y clavos hasta que muere.",
+   "prompt_tokens": 90,
+   "completion_tokens": 301
+  }
+ },
+ {
+  "q": "Según le cuentan doña Magdalena y Amalia a Alfonso, ¿cómo perdió la vista el capitán de Artillería?",
+  "title": "La cena",
+  "author": "Alfonso Reyes",
+  "answer": "En Alemania, adonde fue a hacer estudios en una fábrica de cañones, al día siguiente de llegar, por la explosión de una caldera.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el banquete (julio ramón ribeyro)",
+   "la puerta de bronce (manuel romero de terreros)",
+   "el camino de santiago (alejo carpentier)",
+   "la mano pegada (baldomero lillo)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta candidata se abstiene explícitamente al decir que no lo sabe y no ofrece información sobre cómo perdió la vista.",
+   "prompt_tokens": 1462,
+   "completion_tokens": 53
+  },
+  "direct": {
+   "text": "En **_Julia_**, de **Ignacio Manuel Altamirano**, doña Magdalena y Amalia le cuentan a Alfonso que el capitán de Artillería **perdió la vista en combate, por la explosión de un cañón**, que le quemó o dañó los ojos.",
+   "verdict": "incorrecto",
+   "reason": "Aunque menciona que perdió la vista por una explosión, contradice la referencia al decir que fue en combate y por la explosión de un cañón, cuando fue en Alemania por la explosión de una caldera.",
+   "prompt_tokens": 90,
+   "completion_tokens": 4472
+  }
+ },
+ {
+  "q": "En su texto irónico sobre los inconvenientes de ser ejecutado ante un pelotón, ¿a qué atribuye Julio Torri la palidez de muchos condenados en el postrer trance?",
+  "title": "De fusilamientos",
+  "author": "Julio Torri",
+  "answer": "A la baja calidad del aguardiente que se les da, que les desgarra las entrañas.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "de fusilamientos (julio torri)",
+   "1833-1883 (manuel a. alonso)",
+   "para un final presto (josé lezama lima)",
+   "el último rostro (álvaro mutis)",
+   "el camino de santiago (alejo carpentier)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no ofrece una respuesta de fondo.",
+   "prompt_tokens": 1175,
+   "completion_tokens": 78
+  },
+  "direct": {
+   "text": "En **“De fusilamientos”**, de **Julio Torri**, la palidez de muchos condenados en el trance final se atribuye irónicamente **al madrugón**: los fusilamientos suelen hacerse muy temprano, y esa hora intempestiva —más que el miedo— explicaría el semblante pálido del reo.",
+   "verdict": "incorrecto",
+   "reason": "Atribuye la palidez al madrugón, cuando la referencia indica que se debe a la baja calidad del licor o aguardiente que les desgarra las entrañas.",
+   "prompt_tokens": 105,
+   "completion_tokens": 593
+  }
+ },
+ {
+  "q": "¿Qué revela Sacramento después de que la asamblea de ejidatarios e ingenieros aprueba que los de San Juan de las Manzanas castiguen a su Presidente Municipal?",
+  "title": "La muerte tiene permiso",
+  "author": "Edmundo Valadés",
+  "answer": "Que el Presidente Municipal ya estaba muerto desde el día anterior, porque nadie les hacía caso.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "la muerte tiene permiso (edmundo valadés)",
+   "el jíbaro en la capital (manuel a. alonso)",
+   "1833-1883 (manuel a. alonso)",
+   "el camino de santiago (alejo carpentier)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **“La muerte tiene permiso”**, de **Edmundo Valadés**, Sacramento revela que el Presidente Municipal de San Juan de las Manzanas ya estaba muerto: **“desde ayer el Presidente Municipal de San Juan de las Manzanas está difunto.”**",
+   "verdict": "correcto",
+   "reason": "La respuesta contiene lo esencial: Sacramento revela que el Presidente Municipal de San Juan de las Manzanas ya estaba muerto desde el día anterior.",
+   "prompt_tokens": 1473,
+   "completion_tokens": 97
+  },
+  "direct": {
+   "text": "En **_Un pequeño día de ira_**, de **Emilio Carballido**, Sacramento revela que el castigo ya se llevó a cabo: **los de San Juan de las Manzanas ya mataron a su Presidente Municipal**.",
+   "verdict": "correcto",
+   "reason": "La respuesta identifica lo esencial: Sacramento revela que el Presidente Municipal ya había sido matado, sin contradecir la referencia.",
+   "prompt_tokens": 101,
+   "completion_tokens": 2124
+  }
+ },
+ {
+  "q": "Después de que el granizo destruye su cosecha, Lencho pide cien pesos por correo; ¿cuánto dinero le llega y a quién culpa del faltante?",
+  "title": "Una carta a Dios",
+  "author": "Gregorio López y Fuentes",
+  "answer": "Le llegan sesenta pesos, y culpa a los empleados de la oficina de correos, a quienes llama ladrones.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "una carta a dios (gregorio lópez y fuentes)",
+   "quilapán (baldomero lillo)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **“Una carta a Dios” de Gregorio López y Fuentes**, a Lencho le llegan **sesenta pesos**. Él culpa del faltante a **los empleados de la oficina de correos**, porque dice que “son muy ladrones”.",
+   "verdict": "correcto",
+   "reason": "Indica correctamente que a Lencho le llegan sesenta pesos y que culpa del faltante a los empleados de la oficina de correos, a quienes llama ladrones.",
+   "prompt_tokens": 1380,
+   "completion_tokens": 100
+  },
+  "direct": {
+   "text": "En el cuento **“Una carta a Dios”**, de **Gregorio López y Fuentes**, a Lencho le llegan **setenta pesos**. Él culpa del faltante a **los empleados del correo**, porque cree que Dios sí le envió los cien pesos completos, pero que ellos le robaron el resto.",
+   "verdict": "parcial",
+   "reason": "Acierta al decir que culpa a los empleados del correo, pero se equivoca en la cantidad recibida: fueron sesenta pesos, no setenta.",
+   "prompt_tokens": 99,
+   "completion_tokens": 152
+  }
+ },
+ {
+  "q": "¿Cómo muere el Conde Fabricio de Portinaris al huir aterrado de la aparición del Cardenal?",
+  "title": "La puerta de bronce",
+  "author": "Manuel Romero de Terreros",
+  "answer": "Intenta escapar pasando su delgado cuerpo entre los barrotes de la reja de bronce del palacio y amanece con la cabeza atrapada entre dos barrotes.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "la puerta de bronce (manuel romero de terreros)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **_La puerta de bronce_**, de **Manuel Romero de Terreros**, el Conde Fabricio de Portinaris muere con **la cabeza presa entre dos barrotes** de la entrada del palacio; aparece “amoratada y descompuesta”, con los ojos saliéndosele de las órbitas, frente al tablero donde Ghiberti había cincelado la degollación de Hugo de Portinaris.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial: muere con la cabeza atrapada entre dos barrotes de la reja/entrada del palacio, sin contradecir la referencia.",
+   "prompt_tokens": 1477,
+   "completion_tokens": 226
+  },
+  "direct": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta candidata se abstiene explícitamente al decir que no lo sabe y no ofrece una respuesta de fondo.",
+   "prompt_tokens": 89,
+   "completion_tokens": 3614
+  }
+ },
+ {
+  "q": "¿Qué pasa con el pliego que don Alejandro encuentra dentro del sobre del cofre de hierro?",
+  "title": "El cofre",
+  "author": "Manuel Romero de Terreros",
+  "answer": "No llega a leerlo: se le escapa de las manos temblorosas, cae a la chimenea y las llamas lo consumen.",
+  "fame": "poco_conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el cofre (manuel romero de terreros)",
+   "la mano pegada (baldomero lillo)",
+   "el banquete (julio ramón ribeyro)",
+   "el camino de santiago (alejo carpentier)"
+  ],
+  "work_hit": true,
+  "evidence_hit": true,
+  "rag": {
+   "text": "En **“El cofre”**, de **Manuel Romero de Terreros**, el pliego se escapa de las temblorosas manos de don Alejandro, cae entre las llamas y el fuego lo consume vorazmente.",
+   "verdict": "correcto",
+   "reason": "La respuesta recoge lo esencial: el pliego se le escapa de las manos, cae en las llamas y es consumido por el fuego.",
+   "prompt_tokens": 1476,
+   "completion_tokens": 113
+  },
+  "direct": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente y no ofrece información sobre lo que ocurre con el pliego.",
+   "prompt_tokens": 84,
+   "completion_tokens": 3633
+  }
+ },
+ {
+  "q": "¿Cómo consigue la hiena del zoológico un rostro para ir al baile en lugar de la joven narradora?",
+  "title": "La debutante",
+  "author": "Leonora Carrington",
+  "answer": "Mata y se come a Marie, la criada, y se pone su cara.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "las ménades (julio cortázar)",
+   "para un final presto (josé lezama lima)",
+   "semejante a la noche (alejo carpentier)",
+   "trenzas (maría luisa bombal)",
+   "las fieras (roberto arlt)"
+  ],
+  "work_hit": false,
+  "evidence_hit": false,
+  "rag": {
+   "text": "No lo sé.",
+   "verdict": "no_sabe",
+   "reason": "La respuesta se abstiene explícitamente al decir \"No lo sé\" y no ofrece una respuesta de fondo.",
+   "prompt_tokens": 1567,
+   "completion_tokens": 84
+  },
+  "direct": {
+   "text": "En **“La debutante”**, de **Leonora Carrington**, la hiena del zoológico consigue un rostro **matando y comiéndose a la criada de la narradora**; luego **usa la cara de la criada como una máscara** para poder asistir al baile en lugar de la joven.",
+   "verdict": "correcto",
+   "reason": "La respuesta incluye lo esencial: la hiena mata y se come a la criada y utiliza su rostro para asistir al baile.",
+   "prompt_tokens": 87,
+   "completion_tokens": 1620
+  }
+ },
+ {
+  "q": "¿Qué estaba haciendo el ciego que Ana ve desde el tranvía y que desencadena su crisis?",
+  "title": "Amor",
+  "author": "Clarice Lispector",
+  "answer": "Estaba masticando chicle; al verlo, Ana se sobresalta, la bolsa cae y se rompen los huevos.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "manuscrito hallado en un bolsillo (julio cortázar)",
+   "amor (clarice lispector)",
+   "después del almuerzo (julio cortázar)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "En **“Amor”**, de **Clarice Lispector**, el ciego que Ana ve desde el tranvía **masticaba chicle**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que el ciego estaba masticando chicle, que es el dato esencial preguntado.",
+   "prompt_tokens": 2762,
+   "completion_tokens": 76
+  },
+  "direct": {
+   "text": "El ciego estaba **mascando chicle**. Esa imagen, vista por Ana desde el tranvía, desencadena su crisis en el cuento **“Amor”**, de **Clarice Lispector**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que el ciego estaba mascando o masticando chicle, que es lo esencial de la referencia.",
+   "prompt_tokens": 86,
+   "completion_tokens": 497
+  }
+ },
+ {
+  "q": "¿Qué trabajo le impone el rey al poeta hambriento que llega a su corte para que se gane la comida?",
+  "title": "El rey burgués",
+  "author": "Rubén Darío",
+  "answer": "Lo obliga a dar vueltas al manubrio de una caja de música en el jardín, junto al estanque de los cisnes, a cambio de pan.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "el rey burgués (rubén darío)",
+   "ícaro (sergio pitol)",
+   "irredención (baldomero lillo)",
+   "el camino de santiago (alejo carpentier)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "En **“El rey burgués” de Rubén Darío**, el rey le impone al poeta hambriento **dar vueltas al manubrio**, es decir, tocar una música mecánica para ganarse la comida.",
+   "verdict": "correcto",
+   "reason": "La respuesta identifica lo esencial: el rey le ordena dar vueltas al manubrio para hacer sonar una música mecánica y así ganarse la comida.",
+   "prompt_tokens": 1594,
+   "completion_tokens": 160
+  },
+  "direct": {
+   "text": "En **“El rey burgués”**, de **Rubén Darío**, el rey le impone al poeta hambriento un trabajo humillante: **dar vueltas al manubrio de una caja de música en el jardín**, para entretener y así “ganarse” la comida.",
+   "verdict": "correcto",
+   "reason": "Contiene lo esencial: el rey le impone dar vueltas al manubrio de una caja de música en el jardín para ganarse la comida, sin contradecir la referencia.",
+   "prompt_tokens": 89,
+   "completion_tokens": 451
+  }
+ },
+ {
+  "q": "¿Cómo se llama el cerdo que don Santos, el abuelo de pierna de palo, engorda con la basura que recogen sus nietos Efraín y Enrique?",
+  "title": "Los gallinazos sin plumas",
+  "author": "Julio Ramón Ribeyro",
+  "answer": "Se llama Pascual.",
+  "fame": "conocida",
+  "in_corpus": true,
+  "retrieved_works": [
+   "la mano pegada (baldomero lillo)",
+   "los gallinazos sin plumas (julio ramón ribeyro)",
+   "el camino de santiago (alejo carpentier)",
+   "el jíbaro en la capital (manuel a. alonso)"
+  ],
+  "work_hit": true,
+  "evidence_hit": false,
+  "rag": {
+   "text": "El cerdo se llama **Pascual**, según **_Los gallinazos sin plumas_**, de **Julio Ramón Ribeyro**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que el cerdo se llama Pascual y no contradice la referencia.",
+   "prompt_tokens": 1704,
+   "completion_tokens": 84
+  },
+  "direct": {
+   "text": "El cerdo se llama **Pascual**. Aparece en el cuento **“Los gallinazos sin plumas”**, de **Julio Ramón Ribeyro**.",
+   "verdict": "correcto",
+   "reason": "Identifica correctamente que el cerdo se llama Pascual y no contradice la referencia.",
+   "prompt_tokens": 101,
+   "completion_tokens": 108
+  }
+ }
+]

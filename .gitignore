@@ -5,3 +5,6 @@
 store/
 __pycache__/
 *.pyc
+
+# Caché de llamadas al LLM (compare_llm.py)
+results/compare_cache.jsonl
