@@ -231,25 +231,28 @@ story += [P('1. Resumen', 'h1'),
             'oraciones multilingüe de Meta.'),
           P('Cada obra tiene su propia memoria asociativa. Los embeddings de sus fragmentos se '
             'cuantizan y se <i>registran</i> en ella. Ante una pregunta, el embedding cuantizado de la '
-            'pregunta actúa como <i>cue</i>: todas las memorias lo evalúan en paralelo, se eligen las '
-            'obras mejor puntuadas y, dentro de ellas, los fragmentos más afines. Esos fragmentos se '
-            'añaden a la pregunta (<i>augmentation</i>) y un modelo de lenguaje (GPT-5.5 de OpenAI) redacta la '
-            'respuesta o responde “No lo sé”.'),
-          P('Resultados principales:', 'h3')]
+            'pregunta actúa como <i>cue</i>: todas las memorias lo evalúan en paralelo y se eligen las '
+            'obras mejor puntuadas. Por defecto, al modelo se le pasa <b>el texto completo de las 3 mejores '
+            'obras</b>; como segunda opción, los <b>16 fragmentos que elige BM25</b> (una búsqueda por palabras '
+            'clave) dentro de esas 3 obras, con unas 6 veces menos texto. Ese texto se añade a la pregunta '
+            '(<i>augmentation</i>) y un modelo de lenguaje de OpenAI redacta la respuesta o responde '
+            '“No lo sé”.'),
+          P('Resultados principales (89 preguntas sobre el corpus y 11 ajenas):', 'h3')]
 story += B([
-    'Con preguntas reales sobre cuentos del corpus, la EAM identifica la obra correcta entre las '
-    '5 recuperadas (configuración por defecto) en el <b>67 %</b> de los casos, frente al <b>62 %</b> '
-    'de una base vectorial con similitud coseno sobre los mismos embeddings. Con solo 3 obras la '
-    'ventaja es mayor (67 % frente a 48 %): la EAM acierta pronto y el coseno necesita más candidatos.',
     'El criterio de selección original de dimex (<i>entropy/weight</i>) no funciona en este dominio '
     '(0 %) porque favorece memorias con un solo registro; se propone y justifica un criterio de '
-    'log-verosimilitud suave que generaliza los <i>mismatches</i> de la EAM.',
-    'Para localizar una oración literal del texto, la base vectorial es mejor (72 % frente a 36 %): '
-    'la memoria abstrae la obra completa y pierde el detalle del fragmento.',
-    'La EAM puede rechazar consultas que no reconoce: con un umbral relativo rechaza 9 de 10 '
-    'preguntas ajenas al corpus, a costa de rechazar también el 19 % de las válidas.',
-    'El tamaño de la memoria casi no influye: con 4, 8 o 16 niveles de cuantización (filas) los '
-    'resultados son prácticamente iguales, y m = 4 ocupa la cuarta parte del espacio.',
+    'log-verosimilitud suave que generaliza los <i>mismatches</i> de la EAM. Con él, la obra correcta '
+    'queda entre las 5 recuperadas en el <b>73 %</b> de las preguntas (la base vectorial con coseno: 83 %).',
+    'La EAM puede rechazar consultas que no reconoce: con un umbral relativo rechaza <b>10 de 11</b> '
+    'preguntas ajenas al corpus, a costa de rechazar también el 26 % de las válidas.',
+    'La memoria encuentra la obra, pero su propia puntuación de fragmentos elige mal el pasaje: la '
+    'exactitud de las respuestas es de <b>0.38</b>. Si al modelo se le pasan las 3 obras completas que '
+    'elige la memoria, sube a <b>0.66</b>; si los fragmentos de esas obras se eligen con BM25, 16 '
+    'fragmentos llegan a <b>0.61</b> con unas 6 veces menos texto. La base vectorial estándar da 0.48.',
+    'En obras poco conocidas, donde el modelo sin recuperación casi nunca acierta (0.03), el sistema '
+    'llega a 0.65–0.67. Cuando la evidencia llega al prompt, el modelo acierta el 88–92 % de las veces.',
+    'Con el mismo esquema, eligiendo las obras por coseno se llega a 0.69 (sin diferencia '
+    'significativa): mejorar la elección de obras de la EAM es el siguiente paso.',
     'El port vectorizado de la memoria reproduce exactamente al original de dimex (prueba de '
     'fidelidad automática).',
 ])
@@ -350,6 +353,11 @@ story += [CondPageBreak(7 * cm), KeepTogether([P('4. Arquitectura del sistema', 
               ['rag.py', 'Interfaz de línea de comandos del pipeline completo.'],
               ['build_index.py', 'Interfaz para construir el índice.'],
               ['evaluate.py', 'Compara la EAM con recuperación coseno.'],
+              ['compare_llm.py', 'Compara las respuestas del RAG-EAM con las del LLM sin recuperación.'],
+              ['compare_retrievers.py', 'Compara EAM (m = 16, 8, 4) y coseno con respuesta y juez.'],
+              ['compare_whole_works.py', 'Pasa al LLM las K mejores obras completas en lugar de fragmentos (sección 10.4).'],
+              ['bm25.py', 'Índice BM25 (palabras clave) de los fragmentos.'],
+              ['compare_bm25.py', 'Obras por EAM o coseno y fragmentos por BM25 (sección 10.5).'],
           ], [4.6 * cm, FW - 4.6 * cm])]
 
 # ------------------------------------------------------------------ 5. datos
@@ -565,14 +573,33 @@ story += [P('8.3 Reconocimiento y rechazo (min_z)', 'h2'),
             'z<sub>k</sub> ≥ min_z. Es el análogo relativo de κ en dimex, que también compara el '
             'peso con la media. Si ninguna memoria reconoce el cue, no se recupera nada y el sistema '
             'responde “No lo sé.” sin llamar al modelo de lenguaje.'),
-          P('8.4 Nivel fragmento', 'h2'),
-          P('Dentro de las obras seleccionadas (5 por defecto), cada fragmento c se puntúa con el '
-            'peso suavizado que tendría una memoria que contuviera solo ese fragmento:'),
+          P('8.4 Qué texto recibe el modelo', 'h2'),
+          P('Con <font face="Consolas">--modo</font> se elige qué texto de las obras seleccionadas se pasa '
+            'al modelo:'),
+          table([
+              ['Modo', 'Obras', 'Qué recibe el LLM'],
+              ['<font face="Consolas">obras</font> (por defecto)', '3', 'el texto completo de las obras'],
+              ['<font face="Consolas">bm25</font>', '3', 'los 16 fragmentos con mejor puntaje BM25'],
+              ['<font face="Consolas">eam</font>', '5', 'los 8 fragmentos con mejor puntaje de la memoria'],
+          ], [4.2 * cm, 1.8 * cm, FW - 6.0 * cm]),
+          P('<font face="Consolas">--top-works</font> y <font face="Consolas">--top-chunks</font> cambian '
+            'esos números. En el modo <font face="Consolas">eam</font>, la <b>puntuación propia de la '
+            'memoria</b> da a cada fragmento c el peso suavizado que tendría una memoria que contuviera solo '
+            'ese fragmento:'),
           F('score(c) = (1/n) Σ<sub>j</sub> G(c<sub>j</sub>, v<sub>j</sub>),  con σ<sub>frag</sub> = 0.2'),
           P('Es matemáticamente idéntico a construir una memoria por fragmento, pero se calcula '
-            'directamente sobre los códigos cuantizados, sin almacenar 11,185 tablas. Todos los '
-            'fragmentos de las obras seleccionadas compiten juntos y se devuelven los 8 mejor '
-            'puntuados en total (no 8 por obra), así que pueden venir todos de la misma obra.')]
+            'directamente sobre los códigos cuantizados, sin almacenar 11,185 tablas. La evaluación '
+            '(sección 10) muestra que esta puntuación no distingue bien el pasaje que contiene la respuesta: '
+            'la cuantización borra el detalle fino.'),
+          P('En el modo <font face="Consolas">bm25</font> los fragmentos se eligen con <b>BM25</b> '
+            '(<font face="Consolas">bm25.py</font>), una búsqueda por palabras clave que puntúa cada '
+            'fragmento según cuántas palabras de la pregunta contiene, qué tan raras son en el corpus y su '
+            'longitud (minúsculas, sin acentos ni palabras vacías; k1 = 1.2, b = 0.75). En los modos de '
+            'fragmentos todos los fragmentos de las obras seleccionadas compiten juntos y se devuelven los '
+            'mejor puntuados en total (no por obra). En los modos <font face="Consolas">obras</font> y '
+            '<font face="Consolas">bm25</font> '
+            'se salta una obra cuyo texto ya está contenido en otra elegida (o la contiene), '
+            'como <i>Los hrönir de Tlön</i>, un fragmento de <i>Tlön, Uqbar, Orbis Tertius</i>.')]
 
 # ------------------------------------------------------------------ 8.5 ejemplo
 story += [CondPageBreak(6 * cm), P('8.5 Ejemplo paso a paso', 'h2'),
@@ -655,20 +682,7 @@ nivel 3  0  0  0  0       nivel 3  0  1  0  3       nivel 3  0  0  3  0
           ], [3.6 * cm] + [(FW - 7.6 * cm) / 4] * 4 + [4.0 * cm], hl_rows=(1,)),
           P('Tabla 9. Puntuación de los fragmentos de la obra B.', 'caption')]),
           P('En este nivel todos los candidatos tienen un solo registro, así que no aparece el sesgo del '
-            'paso 1: no hay memorias grandes y pequeñas que comparar.'),
-          P('El recorrido completo con la pregunta real', 'h3'),
-          table([
-              ['Paso', 'Resultado para “¿Qué enfermedad sufre Dahlmann tras golpearse la frente?”'],
-              ['SONAR + cuantización', 'cue de 1024 niveles: [14, 10, 12, 1, 15, …]'],
-              ['Nivel obra (8.2)', 'Top-5: <i>El sur</i> (−0.501), <i>Las ménades</i> (−0.539), <i>Trenzas</i> (−0.541), '
-               '<i>La doble y única mujer</i> (−0.543), <i>Míster Taylor</i> (−0.544); 213 fragmentos candidatos'],
-              ['Reconocimiento (8.3)', 'Mejor obra con z = 1.43: aceptada incluso con min_z = 1.1'],
-              ['Nivel fragmento (8.4)', 'De los 8 mejores (scores 0.497 a 0.476), 6 son de <i>El sur</i>, uno de '
-               '<i>Míster Taylor</i> y uno de <i>Las ménades</i>; los de <i>El sur</i> incluyen el del golpe en la '
-               'frente y el de la septicemia'],
-              ['Augmentation + LLM', 'GPT-5.5: “Dahlmann sufre una septicemia, según <i>El sur</i> de Jorge Luis Borges.”'],
-          ], [4.2 * cm, FW - 4.2 * cm]),
-          P('Tabla 10. Recorrido completo del capítulo con la pregunta del diagrama.', 'caption')]
+            'paso 1: no hay memorias grandes y pequeñas que comparar.')]
 
 # ------------------------------------------------------------------ 9. augmentation
 story += [CondPageBreak(7 * cm), P('9. Augmentation y generación', 'h1'),
@@ -692,9 +706,10 @@ Si la respuesta no está en los documentos, di "No lo sé."
             'que responde en español usando solo los fragmentos, que menciona obra y autor, y que '
             'responde exactamente “No lo sé.” si la información no está.'),
           P('Configuración de la llamada a OpenAI:')]
-story += B(['Modelo por defecto <font face="Consolas">gpt-5.5</font> (se cambia con '
-            '<font face="Consolas">--model</font>; por ejemplo <font face="Consolas">gpt-5.4-mini</font> '
-            'para reducir costo).',
+story += B(['Modelo: el valor de <font face="Consolas">OPENAI_MODEL</font> en '
+            '<font face="Consolas">.env</font> (por defecto <font face="Consolas">gpt-5.5</font>; se cambia '
+            'con <font face="Consolas">--model</font>). En la evaluación de la sección 10 se usó '
+            '<font face="Consolas">gpt-6-luna</font>.',
             'API de Chat Completions de OpenAI con <i>streaming</i>: el texto aparece en la terminal '
             'conforme se genera.',
             'Si la EAM no recupera fragmentos (con <font face="Consolas">--min-z</font>), el sistema '
@@ -703,6 +718,13 @@ story += B(['Modelo por defecto <font face="Consolas">gpt-5.5</font> (se cambia 
             'se leen del archivo <font face="Consolas">.env</font> mediante <font face="Consolas">config.py</font>.'])
 
 # ------------------------------------------------------------------ 10. evaluación
+def figure(path, caption, width=FW):
+    from reportlab.lib.utils import ImageReader
+    w, h = ImageReader(path).getSize()
+    return KeepTogether([Image(path, width=width, height=width * h / w), P(caption, 'caption')])
+
+
+RES = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results')
 story += [P('10. Evaluación', 'h1'),
           P('10.1 Metodología', 'h2'),
           P('Se compara la recuperación con EAM contra una base vectorial convencional: similitud '
@@ -712,128 +734,186 @@ story += [P('10. Evaluación', 'h1'),
 story += B(['<b>Sintético (300 consultas):</b> de fragmentos elegidos al azar (semilla fija) se '
             'toma una oración interior de al menos 10 palabras. El objetivo es recuperar su obra '
             '(obra@1, obra@5) y su fragmento (frag@8). Mide la localización de texto literal.',
-            '<b>Preguntas (31):</b> 21 preguntas escritas a mano sobre cuentos conocidos del corpus '
-            '(El sur, El Aleph, Casa tomada, Axolotl, Luvina, El eclipse, El guardagujas, Viaje a la '
-            'semilla, etc.) y 10 preguntas ajenas al corpus (capital de Australia, fórmula de la '
-            'cafeína, mole poblano…). Para las primeras se mide si la obra correcta aparece entre '
-            'las 5 recuperadas; para las segundas, si la EAM las rechaza. Con la configuración por '
-            'defecto se recuperan 5 obras y 8 fragmentos (obra@5, frag@8).'])
-story += [P('10.2 Resultados', 'h2'),
+            '<b>Preguntas (100):</b> 89 preguntas sobre el corpus, escritas leyendo el texto de cada obra '
+            '(56 de obras conocidas, como <i>El sur</i>, <i>El Aleph</i>, <i>Casa tomada</i> o <i>Luvina</i>, '
+            'y 33 de obras poco conocidas), cada una con respuesta de referencia y una cita literal del '
+            'cuento que la sustenta, y 11 preguntas ajenas al corpus (capital de Australia, fórmula de la '
+            'cafeína, el pueblo que funda José Arcadio Buendía en <i>Cien años de soledad</i>…). En 10.2 y '
+            '10.3 se mide si la obra correcta queda entre las 5 recuperadas y si la EAM rechaza las ajenas; '
+            'en 10.4 y 10.5, la exactitud de la respuesta final.'])
+story += [P('10.2 Criterios de selección y σ', 'h2'),
           table([
               ['Configuración', 'Sint. obra@1', 'Sint. obra@5', 'Sint. frag@8', 'Preg. obra@5', 'Acepta válidas', 'Rechaza ajenas'],
-              ['Vector DB (coseno)', '0.72', '0.85', '0.84', '0.62', '—', '—'],
+              ['Vector DB (coseno)', '0.72', '0.85', '0.84', '0.83', '—', '—'],
               ['EAM dimex, tol = 1.0', '0.00', '0.00', '0.00', '0.00', '1.00', '0.00'],
-              ['EAM dimex, tol = 0.5', '0.01', '0.08', '0.07', '0.00', '1.00', '0.00'],
-              ['EAM dimex suave, tol = 0.5', '0.01', '0.06', '0.05', '0.00', '1.00', '0.00'],
-              ['EAM loglik, σ = 0.1', '0.30', '0.43', '0.40', '0.38', '1.00', '0.00'],
-              ['EAM loglik, σ = 0.2', '0.35', '0.51', '0.47', '0.57', '1.00', '0.00'],
-              ['EAM loglik, σ = 0.3 (defecto)', '0.36', '0.49', '0.47', '0.67', '1.00', '0.00'],
-              ['EAM loglik, σ = 0.4', '0.31', '0.46', '0.44', '0.67', '1.00', '0.00'],
-              ['EAM loglik, σ = 0.3, min_z = 1.05', '0.34', '0.44', '0.41', '0.67', '1.00', '0.50'],
-              ['EAM loglik, σ = 0.3, min_z = 1.10', '0.30', '0.36', '0.35', '0.57', '0.81', '0.90'],
-              ['EAM loglik, σ = 0.3, min_z = 1.15', '0.26', '0.29', '0.27', '0.38', '0.52', '0.90'],
+              ['EAM dimex, tol = 0.5', '0.01', '0.08', '0.07', '0.02', '1.00', '0.00'],
+              ['EAM dimex suave, tol = 0.5', '0.01', '0.06', '0.05', '0.02', '1.00', '0.00'],
+              ['EAM loglik, σ = 0.1', '0.30', '0.43', '0.40', '0.42', '1.00', '0.00'],
+              ['EAM loglik, σ = 0.2', '0.35', '0.51', '0.47', '0.64', '1.00', '0.00'],
+              ['EAM loglik, σ = 0.3 (defecto)', '0.36', '0.49', '0.47', '0.73', '1.00', '0.00'],
+              ['EAM loglik, σ = 0.4', '0.31', '0.46', '0.44', '0.78', '1.00', '0.00'],
+              ['EAM loglik, σ = 0.3, min_z = 1.05', '0.34', '0.44', '0.41', '0.69', '0.96', '0.45'],
+              ['EAM loglik, σ = 0.3, min_z = 1.10', '0.30', '0.36', '0.35', '0.60', '0.74', '0.91'],
+              ['EAM loglik, σ = 0.3, min_z = 1.15', '0.26', '0.29', '0.27', '0.42', '0.45', '0.91'],
           ], [4.9 * cm] + [(FW - 4.9 * cm) / 6] * 6, hl_rows=(7,)),
-          P('Tabla 11. Resultados de <font face="Consolas">python evaluate.py --grid --n 300</font> '
-            '(m = 16, cuantización por cuantiles, 5 obras y 8 fragmentos). “Sint.” = conjunto sintético; '
-            '“Preg.” = preguntas.', 'caption'),
-          P('Efecto de recuperar más obras y fragmentos', 'h3'),
-          P('La versión anterior del sistema recuperaba 3 obras y 5 fragmentos. La Tabla 11b compara '
-            'ambas configuraciones con σ = 0.3 (obra@1 no cambia porque no depende de cuántas obras '
-            'se recuperan):'),
-          table([
-              ['Recuperación', 'Método', 'Sint. obra@K', 'Sint. frag@K', 'Preg. obra@K'],
-              ['3 obras / 5 fragmentos', 'EAM loglik', '0.43', '0.40', '0.67'],
-              ['3 obras / 5 fragmentos', 'Coseno', '0.81', '0.81', '0.48'],
-              ['5 obras / 8 fragmentos (defecto)', 'EAM loglik', '0.49', '0.47', '0.67'],
-              ['5 obras / 8 fragmentos (defecto)', 'Coseno', '0.85', '0.84', '0.62'],
-          ], [5.2 * cm, 3.0 * cm] + [(FW - 8.2 * cm) / 3] * 3, hl_rows=(3,)),
-          P('Tabla 11b. obra@K y frag@K con K = 3/5 (arriba) y K = 5/8 (abajo).', 'caption'),
-          P('Con preguntas reales, la EAM ya encontraba entre sus 3 primeras obras todas las que '
-            'encuentra entre 5: las 7 preguntas que falla quedan fuera de las 5 primeras. El coseno, '
-            'en cambio, pasa de 10 a 13 aciertos de 21 al ampliar a 5 obras, así que la ventaja de la '
-            'EAM se reduce de 4 preguntas a 1. Para el LLM, pasar a 8 fragmentos da más contexto a '
-            'cambio de un prompt más largo, y en el conjunto sintético el fragmento exacto aparece más '
-            'a menudo (0.40 → 0.47).', 'note'),
-          P('También se probaron ε = 0.001, 0.01 y 0.1, una variante ponderada por entropía y un '
-            'criterio híbrido que suma el score de la obra con el mejor fragmento. La ponderación por '
-            'entropía empeora ligeramente; el híbrido sube obra@1 sintético hasta 0.58 pero baja las '
-            'preguntas a 8–10 de 21, por lo que no se adoptó. El efecto del tamaño de la memoria se '
-            'analiza en la sección 10.3.'),
-          P('10.3 Tamaño de la memoria: m = 4, 8 y 16', 'h2'),
-          P('Cada memoria es una tabla de <b>m filas por n columnas</b>: n = 1024 es el dominio (los '
-            'rasgos de SONAR) y m es el rango (los niveles de cuantización). Las filas <i>son</i> los '
-            'niveles, así que variar el número de filas equivale a variar m. El experimento es válido '
-            'sin volver a codificar con SONAR: los embeddings de los fragmentos y de las consultas son '
-            'los mismos, y para cada m sólo se recalculan los cortes del cuantizador y se vuelven a '
-            'registrar las 693 memorias. Como σ se expresa como fracción de m, además del valor por '
-            'defecto (σ = 0.3) se barrió σ de 0.1 a 0.5 para cada tamaño.'),
-          table([
-              ['Memoria (m × n)', 'Entropía media (máx.)', 'Tamaño de R', 'Sint. obra@1', 'Sint. obra@5',
-               'Sint. frag@8', 'Preg. obra@5'],
-              ['4 × 1024', '1.23 bits (2)', '6.8 MB', '0.360', '0.510', '0.467', '0.67'],
-              ['8 × 1024', '1.74 bits (3)', '12.2 MB', '0.360', '0.500', '0.470', '0.67'],
-              ['16 × 1024 (defecto)', '2.13 bits (4)', '23.0 MB', '0.357', '0.493', '0.467', '0.67'],
-              ['Coseno (referencia)', '—', '—', '0.723', '0.850', '0.840', '0.62'],
-          ], [3.4 * cm, 2.9 * cm] + [(FW - 6.3 * cm) / 5] * 5, hl_rows=(3,)),
-          P('Tabla 12. Tamaño de la memoria con σ = 0.3 y sin umbral '
-            '(<font face="Consolas">python evaluate.py --m 4 8 16</font>).', 'caption'),
-          table([
-              ['m', 'σ = 0.1', 'σ = 0.2', 'σ = 0.3', 'σ = 0.4', 'σ = 0.5'],
-              ['4', '0.29 / 0.33', '0.35 / 0.57', '0.36 / 0.67', '0.34 / 0.67', '0.25 / 0.62'],
-              ['8', '0.31 / 0.43', '0.35 / 0.57', '0.36 / 0.67', '0.32 / 0.67', '0.23 / 0.57'],
-              ['16', '0.30 / 0.38', '0.35 / 0.57', '0.36 / 0.67', '0.31 / 0.67', '0.21 / 0.48'],
-          ], [1.6 * cm] + [(FW - 1.6 * cm) / 5] * 5, hl_rows=()),
-          P('Tabla 13. Efecto de σ para cada m: sintético obra@1 / preguntas obra@5.', 'caption'),
-          table([
-              ['m', 'Acepta válidas', 'Preg. obra@5', 'Rechaza ajenas'],
-              ['4', '0.90', '0.57', '0.70'],
-              ['8', '0.81', '0.57', '0.90'],
-              ['16', '0.81', '0.57', '0.90'],
-          ], [1.6 * cm] + [(FW - 1.6 * cm) / 3] * 3),
-          P('Tabla 14. Reconocimiento con umbral min_z = 1.10 (σ = 0.3).', 'caption')]
-story += B(['<b>Los tres tamaños dan prácticamente lo mismo.</b> Las diferencias están dentro del '
-            'ruido: con 300 consultas sintéticas el error típico es de ±0.03, y en las preguntas '
-            'una sola pregunta equivale a 0.05.',
-            '<b>Por qué.</b> Con cuantización por cuantiles cada nivel contiene la misma cantidad de '
-            'datos, y σ se mide como fracción de m. Con σ = 0.3 la gaussiana cubre la misma porción '
-            'de la distribución de cada rasgo con 4, 8 o 16 niveles; reducir m sólo elimina detalle '
-            'fino que la propia gaussiana ya estaba difuminando. Por lo mismo, el mejor σ (0.2–0.3) '
-            'es el mismo para los tres tamaños.',
-            '<b>Costo y rechazo.</b> m = 4 ocupa la cuarta parte de m = 16 sin perder precisión, '
-            'pero con el umbral rechaza menos preguntas ajenas (7 de 10 frente a 9 de 10). m = 8 '
-            'conserva el rechazo con la mitad del espacio.',
-            '<b>Entropía.</b> En los tres casos queda muy por debajo del máximo (log<sub>2</sub> m): '
-            'muchas obras tienen pocos fragmentos y no llegan a llenar las columnas, así que más '
-            'niveles no aportan información.',
-            '<b>El tamaño no explica la brecha con el coseno</b> en frases literales (0.36 frente a '
-            '0.72); esa brecha viene de abstraer la obra completa en una sola memoria.'])
-story += [P('10.4 Análisis', 'h2')]
-story += B(['<b>El criterio entropy/weight falla por construcción</b> en este dominio, como se '
-            'explicó en 8.1: las obras de un fragmento ganan siempre.',
-            '<b>Con preguntas, la EAM supera a la base vectorial (0.67 frente a 0.62 con 5 obras; '
-            '0.67 frente a 0.48 con 3).</b> La memoria de una obra abstrae la distribución de todos sus '
-            'fragmentos; una pregunta, que mezcla personajes, lugares y temas de la obra sin repetir '
-            'ninguna oración, se parece más a esa abstracción que a un fragmento concreto. La EAM '
-            'pone la obra correcta más arriba en la lista; el coseno la alcanza si se le dan más '
-            'candidatos. Con 21 preguntas, la diferencia con 5 obras es de una sola pregunta.',
-            '<b>Para localizar una oración literal, la base vectorial gana (0.72 frente a 0.36).</b> '
-            'La misma abstracción que ayuda con las preguntas diluye el detalle de un pasaje exacto, '
-            'sobre todo en obras largas.',
-            '<b>σ controla la tolerancia:</b> con σ = 0.1 la memoria es demasiado estricta; entre '
-            '0.2 y 0.4 se obtiene el mejor equilibrio; con 0.5 todo se parece a todo.',
-            '<b>El rechazo tiene un costo.</b> Con min_z = 1.10 se rechazan 9 de 10 preguntas ajenas, '
-            'pero también 4 de 21 válidas. Como el modelo ya responde “No lo sé” cuando los fragmentos '
-            'no contienen la respuesta, el umbral viene desactivado por defecto.',
-            '<b>Tamaño de muestra:</b> 21 y 10 preguntas son pocas; las diferencias deben tomarse '
-            'como indicativas. Ampliar el conjunto de preguntas es el siguiente paso natural.'])
+          P('Tabla 10. Resultados de <font face="Consolas">python evaluate.py --grid</font> (m = 16, '
+            'cuantiles, 5 obras y 8 fragmentos). “Sint.” = conjunto sintético; “Preg.” = 89 preguntas '
+            'sobre el corpus; “Acepta válidas” y “Rechaza ajenas” se calculan sobre las 89 válidas y las '
+            '11 ajenas.', 'caption')]
+story += B(['<b>El criterio entropy/weight falla por construcción</b> (0 %), como se explicó en 8.1: las '
+            'obras de un fragmento ganan siempre. Restringir con tol = 0.5 apenas lo mejora.',
+            '<b>Con la log-verosimilitud suave</b> la obra correcta queda entre las 5 primeras en el 73 % '
+            'de las preguntas. La base vectorial lo hace en el 83 % y es mucho mejor para localizar una '
+            'oración literal (0.72 frente a 0.36 en obra@1): la memoria abstrae la obra completa y pierde '
+            'el detalle del fragmento.',
+            '<b>σ controla la tolerancia:</b> con σ = 0.1 la memoria es demasiado estricta (0.42 en las '
+            'preguntas); en el conjunto sintético el mejor valor es 0.3 y en las preguntas el acierto sigue '
+            'subiendo hasta σ = 0.4 (0.78). Se usa σ = 0.3 como compromiso.'])
+story += [P('10.3 Reconocimiento y rechazo (min_z)', 'h2'),
+          P('Una base vectorial siempre devuelve los vecinos más cercanos; la EAM puede no reconocer un '
+            'cue. Sin umbral se aceptan todas las consultas. Con min_z = 1.05 se rechazan 5 de las 11 '
+            'ajenas y sólo el 4 % de las válidas; con <b>min_z = 1.10 se rechazan 10 de las 11 ajenas</b>, '
+            'pero también el 26 % de las válidas, y obra@5 baja de 0.73 a 0.60; con min_z = 1.15 el rechazo '
+            'de ajenas no mejora y se pierde más de la mitad de las válidas (Tabla 10, últimas filas).'),
+          P('La única ajena aceptada con min_z = 1.10 es “¿Qué es un agujero negro?” (z = 1.20 en <i>El '
+            'rapto del sol</i>); la de <i>Cien años de soledad</i>, literaria pero ajena al corpus, se '
+            'rechaza (z = 1.09). La pregunta de Dahlmann obtiene z = 1.43 y se acepta. Como el modelo ya '
+            'responde “No lo sé” cuando los fragmentos no contienen la respuesta, el umbral viene '
+            'desactivado por defecto.')]
 
-story += [P('10.5 Ejemplo: la pregunta del diagrama', 'h2'),
-          P('Para “¿Qué enfermedad sufre Dahlmann tras golpearse la frente?” la memoria de <i>El sur</i> '
-            'obtiene el mejor score y 6 de los 8 fragmentos recuperados pertenecen a esa obra; los otros '
-            'dos vienen de <i>Míster Taylor</i> y <i>Las ménades</i>. El cuarto contiene la respuesta '
-            '(“…el cirujano le dijo que había estado a punto de morir de una septicemia…”) y el quinto '
-            'describe el golpe en la frente con la arista de un batiente. Los dos fragmentos ajenos no '
-            'estorban: el modelo responde con los de <i>El sur</i>.')]
+# ------------------------------------------------------------------ 10.4 obra completa
+story += [CondPageBreak(7 * cm), P('10.4 Obras completas en lugar de fragmentos (K = 1 y K = 3)', 'h2'),
+          P('Con la puntuación de fragmentos de la propia memoria la evidencia llega al prompt sólo en el '
+            '33 % de las preguntas, aunque la obra correcta está entre las 5 elegidas en el 73 %: la memoria '
+            'encuentra la obra, pero elige mal los fragmentos dentro de ella. Este experimento elimina ese paso: las obras se eligen igual que '
+            'siempre (las mejores según la EAM, o según el coseno) y al LLM se le pasa <b>el texto completo</b> '
+            'de las K primeras. Así la evidencia llega al prompt siempre que la obra correcta esté entre las K '
+            '(<font face="Consolas">python compare_whole_works.py --obras K</font>; en el sistema, '
+            '<font face="Consolas">python rag.py --top-works K</font>, modo por defecto).')]
+story += B(['<b>Evaluación de la respuesta:</b> las 89 preguntas sobre el corpus (las ajenas se excluyen, porque '
+            'sin umbral ningún recuperador las rechaza). Un LLM juez, que no sabe qué sistema respondió, '
+            'compara cada respuesta con la de referencia: exactitud = correcto + 0.5·parcial. '
+            '<font face="Consolas">gpt-6-luna</font> como generador y como juez; diferencias con pruebas de '
+            'McNemar pareadas.',
+            '<b>Referencias:</b> la EAM con su propia puntuación de fragmentos (5 obras, 8 fragmentos), la '
+            'base vectorial estándar (los 8 fragmentos más similares por coseno en todo el corpus) y el mismo '
+            'modelo sin recuperación (“LLM directo”). Las obras completas se prueban con K = 1 y K = 3, '
+            'eligiendo las obras con la EAM o, para comparar, con el coseno.',
+            '<b>Sin obras repetidas:</b> con K = 3 se descarta una obra si su texto ya está contenido en otra '
+            'elegida (o la contiene), y se toma la siguiente. En el corpus pasa con <i>Los hrönir de Tlön</i> '
+            '(un fragmento de <i>Tlön, Uqbar, Orbis Tertius</i>), con dos fábulas de Reyes incluidas en '
+            '<i>Del bestiario mexicano</i> y con <i>La insignia</i> / <i>Obligaciones</i> (el mismo texto '
+            'atribuido a dos autores). Con las 89 preguntas sólo cambia el top-3 de una pregunta.',
+            '<b>Costo:</b> el prompt mediano pasa de unas 1 000 palabras (8 fragmentos) a unas 2 100 con K = 1 '
+            'y a unas 10 100 (EAM) o 6 100 (coseno) con K = 3; el más largo tiene unas 18 000 palabras.'])
+story += [table([
+              ['Qué recibe el LLM', 'Recuperador', 'Obra correcta', 'Evidencia en el prompt', 'Exact.', 'Corr.',
+               'Incorr.', 'No lo sé', 'Conoc.', 'Poco conoc.'],
+              ['8 fragmentos (5 obras)', 'EAM m = 16', '0.73 (K = 5)', '0.33', '0.38', '35 %', '2 %', '57 %', '0.43', '0.29'],
+              ['8 fragmentos (5 obras)', 'Coseno', '0.83 (K = 5)', '0.43', '0.48', '45 %', '3 %', '46 %', '0.48', '0.47'],
+              ['1 obra completa', 'EAM m = 16', '0.60 (K = 1)', '0.61', '0.56', '54 %', '2 %', '39 %', '0.56', '0.56'],
+              ['1 obra completa', 'Coseno', '0.70 (K = 1)', '0.70', '0.65', '62 %', '2 %', '30 %', '0.56', '0.79'],
+              ['<b>3 obras completas</b>', '<b>EAM m = 16</b>', '0.70 (K = 3)', '0.71', '<b>0.66</b>', '63 %',
+               '<b>1 %</b>', '29 %', '<b>0.66</b>', '0.67'],
+              ['3 obras completas', 'Coseno', '0.78 (K = 3)', '<b>0.78</b>', '<b>0.71</b>', '69 %', '4 %', '21 %',
+               '0.65', '<b>0.82</b>'],
+              ['Nada', 'LLM directo', '—', '—', '0.40', '36 %', '4 %', '51 %', '0.62', '0.03'],
+          ], [3.0 * cm, 2.1 * cm, 1.9 * cm, 1.9 * cm] + [(FW - 8.9 * cm) / 6] * 6, hl_rows=(5,), tight=True),
+          P('Tabla 11. Obras completas (K = 1 y K = 3) frente a 8 fragmentos, 89 preguntas sobre el corpus. '
+            '“Obra correcta” = obra@K; Exact. = exactitud; Corr. e Incorr. = respuestas correctas e '
+            'incorrectas; “Conoc.” y “Poco conoc.” = exactitud en obras conocidas y poco conocidas.', 'caption'),
+          figure(os.path.join(RES, 'fig_obra_completa.png'),
+                 'Figura 3. Obras completas frente a 8 fragmentos. El color indica el recuperador; el relleno, '
+                 'lo que recibe el LLM: rayado = 8 fragmentos, sólido = 1 obra completa, con puntos = 3 obras '
+                 'completas. (a) Proporción de preguntas cuya evidencia llega al prompt. (b) Exactitud por tipo '
+                 'de obra; la línea discontinua es el modelo sin recuperación.')]
+story += B(['<b>Con obras completas la EAM mejora mucho:</b> la exactitud pasa de 0.38 (8 fragmentos) a 0.56 '
+            'con una obra y a 0.66 con tres. Frente a 8 fragmentos, con K = 3 hay 26 preguntas que pasan a ser '
+            'correctas y una que deja de serlo (McNemar, p &lt; 0.001). De K = 1 a K = 3 la mejora es de 11 '
+            'frente a 3 preguntas (p = 0.06).',
+            '<b>Con K = 3 la EAM supera de forma significativa a la base vectorial estándar</b> (coseno con 8 '
+            'fragmentos): 0.66 frente a 0.48, con 26 preguntas a favor de la EAM y 10 en contra (p = 0.01). '
+            'Con K = 1 la ventaja (0.56 frente a 0.48) no era significativa.',
+            '<b>Con el mismo trato, el coseno sigue un poco adelante, pero ya sin diferencia significativa:</b> '
+            '0.71 frente a 0.66 con K = 3 (16 frente a 11 preguntas, p = 0.44). En las obras conocidas la EAM '
+            'queda igual o arriba (0.66 frente a 0.65); la diferencia está en las poco conocidas (0.82 frente a '
+            '0.67), donde el coseno elige mejor la obra. La EAM con K = 3 empata con el coseno con K = 1 (14 '
+            'frente a 13 preguntas).',
+            '<b>La EAM inventa menos:</b> con K = 3, cuando la obra correcta no está entre las tres, la EAM se '
+            'abstiene el 96 % de las veces y no inventa ninguna respuesta; el coseno inventa en el 10 % de esos '
+            'casos. En total, 1 % de respuestas incorrectas con la EAM frente a 4 % con el coseno.',
+            '<b>El texto largo no estorba al modelo:</b> cuando la obra correcta está en el prompt acierta el '
+            '88–89 % de las veces con ambos recuperadores, incluso con tres obras completas (unas 10 000 '
+            'palabras). La exactitud queda limitada por obra@K.',
+            '<b>Frente al LLM sin recuperación:</b> con K = 3 la EAM supera al modelo solo también en las obras '
+            'conocidas (0.66 frente a 0.62), y en las poco conocidas pasa de 0.03 a 0.67.',
+            '<b>Costo:</b> K = 3 multiplica el prompt por unas 10 respecto a 8 fragmentos (por 5 con el coseno, '
+            'que tiende a elegir obras más cortas). Es el precio de no depender de la selección de fragmentos.'])
+
+# ------------------------------------------------------------------ 10.5 BM25 dentro de las obras
+story += [CondPageBreak(7 * cm), P('10.5 Fragmentos con BM25 dentro de las obras elegidas', 'h2'),
+          P('Las obras completas resuelven el problema de la selección de fragmentos, pero con prompts de hasta '
+            '10 000 palabras. Este experimento conserva la elección de obras (K = 1 y K = 3, sin repetidas) y '
+            'cambia sólo la forma de elegir los fragmentos dentro de ellas: en lugar del kernel de la EAM, que '
+            'compara códigos cuantizados, se usa <b>BM25</b>, una búsqueda por palabras clave que puntúa cada '
+            'fragmento según cuántas palabras de la pregunta contiene, qué tan raras son en el corpus y su '
+            'longitud. Al LLM se le pasan los 8 o los 16 fragmentos con mejor puntaje '
+            '(<font face="Consolas">python compare_bm25.py</font>; en el sistema, '
+            '<font face="Consolas">python rag.py --modo bm25</font>).')]
+story += B(['<b>BM25:</b> minúsculas, sin acentos, sin palabras vacías y sin reducir a la raíz; parámetros '
+            'estándar (k1 = 1.2, b = 0.75), sin ajustar con las preguntas de evaluación '
+            '(<font face="Consolas">bm25.py</font>).',
+            '<b>Arquitectura híbrida:</b> la memoria decide en qué obras buscar (y, con min_z, si se responde); '
+            'BM25 sólo ordena los fragmentos de esas obras.',
+            '<b>Configuración:</b> mismas 89 preguntas, modelo y juez; EAM y coseno como recuperadores de obras; '
+            'K = 1 y 3; 8 y 16 fragmentos. 712 respuestas con 437 prompts distintos: 604 llamadas en total.'])
+story += [table([
+              ['Obras', 'Qué recibe el LLM', 'Evidencia en el prompt', 'Palabras', 'Exact.', 'Incorr.', 'No lo sé',
+               'Conoc.', 'Poco conoc.'],
+              ['EAM, K = 5', '8 fragm. (kernel EAM)', '0.33', '~1 000', '0.38', '2 %', '57 %', '0.43', '0.29'],
+              ['EAM, K = 1', '8 fragm. BM25', '0.51', '860', '0.48', '4 %', '46 %', '0.48', '0.48'],
+              ['EAM, K = 1', '16 fragm. BM25', '0.58', '1 690', '0.56', '3 %', '39 %', '0.55', '0.56'],
+              ['EAM, K = 1', 'obra completa', '0.61', '2 120', '0.56', '2 %', '39 %', '0.56', '0.56'],
+              ['EAM, K = 3', '8 fragm. BM25', '0.55', '860', '0.53', '4 %', '40 %', '0.51', '0.58'],
+              ['<b>EAM, K = 3</b>', '<b>16 fragm. BM25</b>', '0.64', '1 700', '<b>0.61</b>', '3 %', '33 %',
+               '0.58', '0.65'],
+              ['EAM, K = 3', 'obras completas', '0.71', '10 140', '0.66', '1 %', '29 %', '0.66', '0.67'],
+              ['Coseno, K = 1', '8 fragm. BM25', '0.57', '830', '0.55', '6 %', '37 %', '0.46', '0.70'],
+              ['Coseno, K = 1', '16 fragm. BM25', '0.66', '1 640', '0.63', '3 %', '30 %', '0.54', '0.80'],
+              ['Coseno, K = 3', '8 fragm. BM25', '0.64', '850', '0.61', '7 %', '29 %', '0.53', '0.76'],
+              ['Coseno, K = 3', '16 fragm. BM25', '0.73', '1 690', '0.69', '4 %', '24 %', '0.60', '0.83'],
+              ['Coseno, K = 3', 'obras completas', '0.78', '6 150', '0.71', '4 %', '21 %', '0.65', '0.82'],
+              ['Coseno (vector DB)', '8 fragm. (coseno)', '0.43', '~1 000', '0.48', '3 %', '46 %', '0.48', '0.47'],
+              ['—', 'LLM directo', '—', '—', '0.40', '4 %', '51 %', '0.62', '0.03'],
+          ], [2.5 * cm, 2.9 * cm, 1.9 * cm, 1.7 * cm] + [(FW - 9.0 * cm) / 5] * 5, hl_rows=(6,), tight=True),
+          P('Tabla 12. Fragmentos con BM25 dentro de las obras elegidas, frente al kernel de la EAM y a las '
+            'obras completas (89 preguntas, <font face="Consolas">gpt-6-luna</font>). “Palabras” = tamaño '
+            'mediano del texto recuperado; Exact. = exactitud; Incorr. = respuestas incorrectas.', 'caption'),
+          figure(os.path.join(RES, 'fig_bm25.png'),
+                 'Figura 4. Fragmentos con BM25 frente a obras completas, para K = 1 y K = 3. El color indica '
+                 'el recuperador de obras; el relleno, lo que recibe el LLM: rayado = 8 fragmentos BM25, '
+                 'cuadriculado = 16, sólido = obras completas. La línea punteada es la EAM actual (kernel, 8 '
+                 'fragmentos de 5 obras) y la discontinua el LLM sin recuperación.')]
+story += B(['<b>BM25 mejora a la EAM en todas las configuraciones:</b> frente a la EAM actual (0.38), la '
+            'exactitud sube a 0.48–0.61, y la diferencia es significativa en las cuatro (McNemar, p entre '
+            '0.0001 y 0.03). La memoria elegía bien las obras; lo que fallaba era el kernel de fragmentos.',
+            '<b>16 fragmentos rinden casi como la obra completa con mucho menos texto.</b> Con K = 1, 16 '
+            'fragmentos BM25 empatan con la obra completa (0.56 y 0.56) usando 1 700 palabras en lugar de '
+            '2 100. Con K = 3, 16 fragmentos llegan a 0.61 frente a 0.66 de las obras completas (p = 0.23) con '
+            'unas 6 veces menos texto (1 700 frente a 10 100 palabras). Con sólo 8 fragmentos la pérdida frente '
+            'a las obras completas sí es significativa (0.53 frente a 0.66, p = 0.01).',
+            '<b>Frente a la base vectorial estándar</b> (coseno con 8 fragmentos, 0.48), la mejor configuración '
+            'BM25 de la EAM (K = 3, 16 fragmentos) llega a 0.61, con un prompt de tamaño parecido (23 frente a '
+            '12 preguntas, p = 0.09).',
+            '<b>Con el mismo trato, el coseno sigue un poco adelante</b> (0.69 frente a 0.61 con K = 3 y 16 '
+            'fragmentos, p = 0.19): la diferencia vuelve a estar en la elección de obras (obra@3: 0.78 frente a '
+            '0.70), sobre todo en las poco conocidas.',
+            '<b>El LLM sigue respondiendo bien cuando la evidencia llega:</b> acierta el 88–92 % de las veces '
+            'en todas las configuraciones; las respuestas incorrectas se mantienen bajas (3–4 % con la EAM, '
+            '3–7 % con el coseno).',
+            '<b>Lectura:</b> la mejor relación entre exactitud y costo para la EAM es K = 3 con 16 fragmentos '
+            'BM25. Para seguir mejorando hay que atacar la elección de obras (por ejemplo, con memorias por '
+            'sección).'])
 
 # ------------------------------------------------------------------ 11. instalación y uso
 story += [CondPageBreak(7 * cm), P('11. Instalación', 'h1'),
@@ -929,8 +1009,10 @@ python rag.py "¿Qué enfermedad sufre Dahlmann tras golpearse la frente?"
           code('''
 python rag.py                          # modo interactivo (Ctrl+C para salir)
 python rag.py --no-llm "..."           # solo recuperación + prompt, sin LLM
+python rag.py --modo bm25 "..."        # 3 obras, 16 fragmentos BM25 (en lugar de obras completas)
+python rag.py --modo eam "..."         # 5 obras, 8 fragmentos con la puntuación de la memoria
 python rag.py --min-z 1.1 "..."        # activa el rechazo de consultas no reconocidas
-python rag.py --top-works 3 --top-chunks 5 "..."   # recuperación más acotada
+python rag.py --modo bm25 --top-chunks 8 "..."   # menos fragmentos: prompt más corto
 python rag.py --criterion dimex --tolerance 0.5 "..."   # criterio original de dimex
 python rag.py --sigma 0.2 "..."        # memoria más estricta
 python rag.py --model gpt-5.4-mini "..."   # modelo más barato
@@ -953,38 +1035,35 @@ python rag.py --model gpt-5.4-mini "..."   # modelo más barato
 
 story += [KeepTogether([P('12.4 Ejemplo de salida', 'h2'), code('''
 Recuperación (EAM):
-  [1] Jorge Luis Borges - «El sur»  frag=0.497 obra=-0.501 mismatches=146
-      Dahlmann se inclinó a recoger la daga y sintió dos cosas. ...
-  [2] Jorge Luis Borges - «El sur»  frag=0.492 obra=-0.501 mismatches=146
-      Dahlmann no se extrañó de que el otro, ahora, lo conociera, ...
-  [3] Jorge Luis Borges - «El sur»  frag=0.490 obra=-0.501 mismatches=146
-      Dalhman, perplejo, decidió que nada había ocurrido y abrió ...
-  [4] Jorge Luis Borges - «El sur»  frag=0.490 obra=-0.501 mismatches=146
-      En esos días, Dahlmann minuciosamente se odió; ... había estado
-      a punto de morir de una septicemia ...
-  [5] Jorge Luis Borges - «El sur»  frag=0.488 obra=-0.501 mismatches=146
-      Dahlmann había conseguido, esa tarde, un ejemplar descabalado ...
-  [6] Augusto Monterroso - «Míster Taylor»  frag=0.479 obra=-0.544 mismatches=173
-      Este impulso fue particularmente comprobable en una nueva ...
-  [7] Jorge Luis Borges - «El sur»  frag=0.478 obra=-0.501 mismatches=146
-      Del otro lado de las vías quedaba la estación, que era poco ...
-  [8] Julio Cortázar - «Las ménades»  frag=0.476 obra=-0.539 mismatches=22
-      La chica de Epifanía me miró, reconociéndome, y me gritó algo, ...
+  [1] Jorge Luis Borges - «El sur»  frag=-0.501 obra=-0.501 mismatches=146
+      (texto completo de la obra) …
+  [2] Julio Cortázar - «Las ménades»  frag=-0.539 obra=-0.539 mismatches=22
+      (texto completo de la obra) …
+  [3] María Luisa Bombal - «Trenzas»  frag=-0.541 obra=-0.541 mismatches=229
+      (texto completo de la obra) …
 
 Respuesta:
 Dahlmann sufre una **septicemia** tras golpearse la frente, según
 *“El sur”* de **Jorge Luis Borges**.
 ''')]),
-          P('<b>frag</b> es el score del fragmento (entre 0 y 1; mayor es mejor), <b>obra</b> es el '
-            'score log-verosímil de la memoria (mayor es mejor) y <b>mismatches</b> el número de '
-            'rasgos del cue que caen en celdas vacías de esa memoria (de 1024).', 'note'),
+          P('En el modo por defecto cada resultado es una obra completa: <b>obra</b> es el score '
+            'log-verosímil de su memoria (mayor es mejor; en este modo <b>frag</b> repite ese valor) y '
+            '<b>mismatches</b> el número de rasgos del cue que caen en celdas vacías de esa memoria (de '
+            '1024). Con <font face="Consolas">--modo bm25</font> o <font face="Consolas">--modo eam</font> '
+            'cada resultado es un fragmento y <b>frag</b> es su puntaje. La respuesta es ilustrativa.', 'note'),
           P('12.5 Paso 3 (opcional): evaluar', 'h2'),
           code('''
 python evaluate.py               # evalúa la configuración guardada
-python evaluate.py --grid        # barrido de criterios y parámetros (Tabla 11)
-python evaluate.py --m 4 8 16    # tamaños de memoria (Tablas 12 a 14)
+python evaluate.py --grid        # barrido de criterios y parámetros (Tabla 10)
+python evaluate.py --m 4 8 16    # compara tamaños de memoria
 python evaluate.py -v            # detalle por pregunta: obras de la EAM y del coseno
 python evaluate.py --n 1000      # más consultas sintéticas (por defecto 300)
+python compare_llm.py            # RAG-EAM frente al LLM sin recuperación
+python compare_retrievers.py     # EAM (m = 16, 8, 4) frente a coseno
+python compare_retrievers.py --no-llm   # sólo recuperación, sin llamadas a la API
+python compare_whole_works.py --obras 1   # obras completas frente a 8 fragmentos (Tabla 11)
+python compare_whole_works.py --obras 3
+python compare_bm25.py           # obras por EAM/coseno + fragmentos BM25 (Tabla 12)
 '''),
           P('Para añadir preguntas de evaluación, edite <font face="Consolas">questions.json</font>: '
             'cada entrada tiene <font face="Consolas">q</font> (pregunta), '
@@ -1004,9 +1083,13 @@ store.set_params(sigma=0.3, min_z=None)       # ajustes sin reconstruir
 encoder = SonarEncoder()
 
 pregunta = "¿Qué hace la gallina que la salva de ser cocinada?"
-hits = store.retrieve(encoder.encode(pregunta), top_works=5, top_chunks=8)
+cue = encoder.encode(pregunta)
+texts = store.load_texts("../datasets_csv")   # texto completo de las obras
+hits = store.retrieve_works(cue, 3, texts)    # modo por defecto: 3 obras completas
+# hits = store.retrieve_bm25(cue, pregunta, 3, 16)   # modo bm25: 16 fragmentos
+# hits = store.retrieve(cue, 5, 8)                   # modo eam: 8 fragmentos
 for h in hits:
-    print(h.author, h.title, round(h.chunk_score, 3))
+    print(h.author, h.title, round(h.work_score, 3))
 
 print(build_prompt(pregunta, hits))           # prompt aumentado
 print(answer(pregunta, hits))                 # usa la key del .env
@@ -1044,6 +1127,12 @@ PROYECTO/
     ├── build_index.py         CLI: construir índice
     ├── rag.py                 CLI: preguntar
     ├── evaluate.py            CLI: evaluar contra coseno
+    ├── compare_llm.py         RAG-EAM frente a LLM directo
+    ├── compare_retrievers.py  EAM (m = 16, 8, 4) frente a coseno
+    ├── compare_whole_works.py obra completa frente a 8 fragmentos
+    ├── bm25.py                índice BM25 de los fragmentos
+    ├── compare_bm25.py        obras por EAM/coseno + fragmentos BM25
+    ├── results/               resultados y figuras de los experimentos
     ├── questions.json         preguntas de evaluación
     ├── requirements.txt
     ├── README.md
@@ -1056,12 +1145,12 @@ PROYECTO/
         └── embeddings.sha1    huella del corpus fragmentado
 ''')]),
           P('14. Limitaciones y trabajo futuro', 'h1')]
-story += B(['<b>Conjunto de evaluación pequeño.</b> Convendría ampliar las preguntas (por ejemplo, '
-            'generarlas por obra y revisarlas a mano) y evaluar también la calidad de la respuesta '
-            'final, no solo la recuperación.',
-            '<b>Detalle fino.</b> La memoria por obra pierde precisión para localizar pasajes '
-            'exactos. Opciones: memorias por sección de la obra en obras largas, o un nivel '
-            'intermedio de memorias por grupos de fragmentos.',
+story += B(['<b>Evaluación.</b> 89 preguntas válidas y 11 ajenas, calificadas por un LLM juez y con un '
+            'solo modelo de lenguaje. Convendría revisarlas a mano, ampliar las ajenas y probar otros '
+            'modelos; las preguntas se escribieron leyendo los textos, lo que puede favorecer a BM25.',
+            '<b>Elección de obras.</b> La EAM elige peor las obras que el coseno, sobre todo las poco '
+            'conocidas, y tiende a favorecer obras con muchos fragmentos. Opciones: memorias por sección '
+            'en las obras largas, o un nivel intermedio de memorias por grupos de fragmentos.',
             '<b>Preguntas frente a narración.</b> SONAR codifica igual una pregunta que una oración '
             'narrativa; reformular la pregunta como afirmación antes de codificarla podría acercar '
             'el cue al texto.',
@@ -1070,7 +1159,7 @@ story += B(['<b>Conjunto de evaluación pequeño.</b> Convendría ampliar las pr
             '<b>Uso del recuerdo.</b> La λ-reducción (recall) reconstruye un vector completo a partir '
             'del cue; podría decodificarse con el decodificador de SONAR para inspeccionar qué '
             '“recuerda” cada memoria.',
-            '<b>Calibración del rechazo.</b> El umbral min_z se ajustó con 31 preguntas; con más '
+            '<b>Calibración del rechazo.</b> El umbral min_z se evaluó con 11 preguntas ajenas; con más '
             'datos podría calibrarse para una tasa de falsos rechazos objetivo.'])
 
 # ------------------------------------------------------------------ referencias

@@ -121,8 +121,14 @@ def norm(s):
 
 
 # ------------------------------------------------------------ experimento
+ABSTAIN = {'no lo sé.', 'no lo sé', '"no lo sé."'}
+
+
 def judge(cache, client, model, item, cand):
-    ev = f"<evidencia_del_texto>{item['evidence']}</evidencia_del_texto>\n" if item.get('evidence') else ''
+    # Una abstención literal no necesita juez: ahorra una llamada a la API.
+    if norm(cand) in ABSTAIN:
+        return 'no_sabe', 'abstención literal'
+    ev =f"<evidencia_del_texto>{item['evidence']}</evidencia_del_texto>\n" if item.get('evidence') else ''
     out = cached_chat(cache, client, model, JUDGE_SYSTEM,
                       JUDGE_TEMPLATE.format(q=item['q'], ref=item['answer'], evidence=ev, cand=cand),
                       json_mode=True)

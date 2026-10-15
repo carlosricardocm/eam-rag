@@ -181,6 +181,73 @@ class EAMStore:
                             int(mis[w.work_id])))
         return hits
 
+    def distinct_works(self, ranked, k: int):
+        """Las k primeras obras de `ranked` sin repetir texto: se salta una obra
+        si su texto está contenido en otra ya elegida o la contiene (p. ej. un
+        fragmento publicado aparte, o el mismo texto con dos autores).
+        Requiere load_texts()."""
+        chosen = []
+        dup = getattr(self, 'duplicates', {})
+        for w in ranked:
+            w = int(w)
+            if not any(w in dup.get(c, ()) for c in chosen):
+                chosen.append(w)
+            if len(chosen) == k:
+                break
+        return chosen
+
+    def retrieve_works(self, query_emb, top_works: int, texts):
+        """Modo obra completa: las top_works obras distintas que mejor reconoce
+        la EAM, con su texto íntegro (texts[work_id]) en lugar de fragmentos."""
+        _, order, wscore, mis = self.rank_works(query_emb)
+        return [Hit(-1, w, self.works[w].author, self.works[w].title, texts[w],
+                    float(wscore[w]), float(wscore[w]), int(mis[w]))
+                for w in self.distinct_works(order, top_works)]
+
+    def bm25(self):
+        """Índice BM25 de los fragmentos (se construye una vez, en segundos)."""
+        if getattr(self, '_bm25', None) is None:
+            from bm25 import BM25
+            self._bm25 = BM25([c.text for c in self.chunks])
+        return self._bm25
+
+    def retrieve_bm25(self, query_emb, query_text: str, top_works: int = TOP_WORKS,
+                      top_chunks: int = TOP_CHUNKS, ranked_works=None):
+        """Arquitectura híbrida: la EAM elige las top_works obras distintas y BM25
+        elige, dentro de ellas, los top_chunks fragmentos con más palabras de la
+        pregunta. ranked_works permite usar otro orden de obras (p. ej. coseno)."""
+        _, order, wscore, mis = self.rank_works(query_emb)
+        works = self.distinct_works(order if ranked_works is None else ranked_works, top_works)
+        cand = np.array([c for w in works for c in self.chunks_of.get(w, [])])
+        if not len(cand):
+            return []
+        scores = self.bm25().scores(query_text)[cand]
+        hits = []
+        for b in np.argsort(-scores, kind='stable')[:top_chunks]:
+            c = self.chunks[cand[b]]
+            w = self.works[c.work_id]
+            hits.append(Hit(c.chunk_id, w.work_id, w.author, w.title, c.text, float(scores[b]),
+                            float(wscore[w.work_id]), int(mis[w.work_id])))
+        return hits
+
+    def load_texts(self, data_dir: str):
+        """Texto íntegro de cada obra (el índice sólo guarda los fragmentos).
+        Se relee el corpus y se verifica que las obras coinciden con el índice.
+        También marca las obras cuyo texto está contenido una en otra."""
+        import re
+        from corpus import load_works
+        full = load_works(data_dir)
+        if [w.link for w in full] != [w.link for w in self.works]:
+            raise RuntimeError('El corpus no coincide con el índice; reconstrúyalo con build_index.py')
+        norm = [re.sub(r'\W+', ' ', w.text.lower()).strip() for w in full]
+        self.duplicates = {}
+        for i, a in enumerate(norm):
+            for j, b in enumerate(norm):
+                if i != j and len(a) > 200 and a[:300] in b:
+                    self.duplicates.setdefault(i, set()).add(j)
+                    self.duplicates.setdefault(j, set()).add(i)
+        return [w.text for w in full]
+
     # ---------------------------------------------------------- persistence
     def save(self, path: str):
         os.makedirs(path, exist_ok=True)

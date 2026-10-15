@@ -1,0 +1,1689 @@
+{
+ "model": "gpt-6-luna",
+ "judge_model": "gpt-6-luna",
+ "n": 89,
+ "obras": 1,
+ "configs": [
+  {
+   "name": "EAM m=16",
+   "retriever": "eam",
+   "top_works": 1,
+   "mode": "obra completa",
+   "rows": [
+    {
+     "q": "¿Qué enfermedad sufre Dahlmann tras golpearse la frente?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2433,
+     "answer": "Sufre una septicemia, según «El sur», de Jorge Luis Borges.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué ve el narrador en el sótano de la casa de la calle Garay?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2796,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué hacen los hermanos cuando los ruidos toman la parte del fondo de la casa?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1512,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿En qué animal se convierte el hombre que visita el acuario del Jardin des Plantes?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2243,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué novela lee el hombre sentado en el sillón de terciopelo verde?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 590,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué sueña el motociclista accidentado mientras está en el hospital?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1440,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué vomita el narrador que se queda en el departamento de Andrée en Buenos Aires?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3234,
+     "answer": "Vomita conejitos. («Carta a una señorita en París», de Julio Cortázar.)",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué pasa con los automovilistas atrapados durante días en el embotellamiento de la autopista?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2621,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Cómo intenta fray Bartolomé Arrazola salvarse de los indígenas que lo iban a sacrificar?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 367,
+     "answer": "En «El eclipse», de Augusto Monterroso, fray Bartolomé intenta salvarse amenazando con hacer que el sol se oscurezca si lo matan, aprovechando que sabe que ese día habrá un eclipse.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué negocio hacía Mr. Taylor con las cabezas reducidas?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2187,
+     "answer": "En «Míster Taylor», de Augusto Monterroso, Mr. Taylor obtenía y enviaba cabezas humanas reducidas a su tío, Mr. Rolston, quien las vendía en Estados Unidos.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué hicieron con la oveja negra después de fusilarla?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1856,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué le pide Juvencio Nava a su hijo que diga a quienes lo van a fusilar?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2440,
+     "answer": "En «¡Diles que no me maten!», de Juan Rulfo, Juvencio le pide a su hijo que les diga que no lo maten y que tengan lástima de él, «por caridad de Dios».",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿A quién carga el padre sobre los hombros mientras camina de noche buscando Tonaya?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1511,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Cómo es el viento y la tierra del pueblo de Luvina?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3067,
+     "answer": "En **“Luvina”**, de **Juan Rulfo**, el viento es pardo, casi negro, y sopla con fuerza: raspa las paredes, arranca tierra y puede llevarse los techos. La tierra es empinada, pedregosa y reseca, llena de barrancas y grietas; llueve muy poco.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué le pasó a la vaca de Tacha cuando creció el río?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1671,
+     "answer": "El río se llevó a la vaca de Tacha, la Serpentina, y la arrastró corriente abajo. En «Es que somos muy pobres», de Juan Rulfo.",
+     "verdict": "parcial"
+    },
+    {
+     "q": "¿Qué le explica el guardagujas al forastero sobre los trenes y las estaciones?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1443,
+     "answer": "En **“Cambiadores”**, de **Baldomero Lillo**, le explica que los trenes pasan rápido por las estaciones porque todos confían en el guardagujas, cuya maniobra es decisiva: si se equivoca, ya no puede corregirla a tiempo.",
+     "verdict": "incorrecto"
+    },
+    {
+     "q": "¿Qué encontró la hormiga que llevó al hormiguero un miligramo prodigioso?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2306,
+     "answer": "Encontró un prodigioso miligramo. («El prodigioso miligramo», de Juan José Arreola.)",
+     "verdict": "incorrecto"
+    },
+    {
+     "q": "¿En qué cuento la vida de don Marcial transcurre al revés, de la muerte al nacimiento?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 4705,
+     "answer": "En «Viaje a la semilla», de Alejo Carpentier.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Con quién se encuentra Laura cuando su coche se detiene en el puente de Cuitzeo?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 7385,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué libro le presta al fin la hija del dueño de la librería a la narradora?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1863,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué hace la gallina que la salva de ser cocinada para el almuerzo?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 978,
+     "answer": "La gallina pone un huevo, y la niña pide que no la maten. En «Una gallina», de Clarice Lispector.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿En qué localidad venden los hermanos Nilsen a Juliana Burgos, y a quién?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1425,
+     "answer": "La venden en Morón a la patrona del prostíbulo. En «La intrusa», de Jorge Luis Borges.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cómo se llama el barco nórdico en cuyos marineros busca Emma Zunz a un hombre en el puerto, y de dónde es?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 4469,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "Según el minotauro que narra su propia vida, ¿cada cuánto tiempo y cuántos hombres entran en su casa?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 4772,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "En el sistema de numeración inventado por Ireneo Funes, ¿qué nombre usaba en lugar del número siete mil trece?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2743,
+     "answer": "En «Funes el memorioso», de Jorge Luis Borges, Funes decía «Máximo Pérez» en lugar de siete mil trece.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cuánto dinero escondió Baltasar Espinosa en uno de sus libros, por desconfianza hacia los Gutres, en la estancia Los Álamos?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1999,
+     "answer": "Baltasar Espinosa escondió doscientos cuarenta pesos en uno de sus libros, por desconfianza hacia los Gutres. («El evangelio según Marcos», de Jorge Luis Borges.)",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Por qué viaja tanto en avión el anciano escritor al que investiga el narrador por encargo de un diputado que sospechaba de un tráfico de órganos de viejos?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1032,
+     "answer": "Viaja tanto porque le dan premios literarios. Así lo explica el anciano escritor en «El caso de los viejitos voladores», de Adolfo Bioy Casares.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Con qué le llena Hebe los bolsillos a su marido Pedro para que su cuerpo, que ha perdido peso, no se eleve?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 974,
+     "answer": "En «El leve Pedro», de Enrique Anderson Imbert, Hebe le llena los bolsillos con grandes tuercas, caños de plomo y piedras.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "En el hotel donde un huevo frito pasa de mano en mano entre varios cocineros y resulta delicioso, ¿qué regla culinaria establece el jefe de fiscalización?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 4780,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "En el monólogo escrito en habla porteña sobre una pelea de boxeo en el Luna Park, ¿en qué asalto gana Bonavena al brasileño Pires y de qué modo?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 5519,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Dónde muere el atorrante de la calle Corrientes, antiguo condiscípulo del narrador en el colegio del Salvador, y en qué noche?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2804,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Cuántos ejemplares llevaba vendidos la primera edición de la novela cuyos gerundios suprimía el narrador antes de arrastrarse bajo el escritorio de su compañera del walkman?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 541,
+     "answer": "La primera edición llevaba vendidos quince mil ejemplares, según *El corrector*, de Andrés Rivera.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Dónde termina encerrado Octaviano Crivellini, el copista de estatuas acosado por el niño Tirso en la pensión de Mme. Renard?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1193,
+     "answer": "Octaviano Crivellini termina encerrado en un gran armario del corralón. («El vendedor de estatuas», de Silvina Ocampo.)",
+     "verdict": "correcto"
+    },
+    {
+     "q": "En el armario de nogal cuyas habitantes se volvieron escritoras por la inacción y el aburrimiento, ¿cómo se titula la novela que escribió la novelista con gafas tras diez años de trabajo?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 493,
+     "answer": "La novela se titula *Huelga*, en «Las muñecas» de Juan Rodolfo Wilcock.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "El narrador vive toda una vida (boda en Ramos Mejía, mellizos en Liniers) durante un solo viaje por el Ferrocarril Oeste. ¿En qué estación se entera de la muerte de su esposa?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2421,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Cómo mata la tía Pepa Mondelli a su gato negro después de que este devoró uno de sus pollitos?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1272,
+     "answer": "En «El gato cocido», de Roberto Arlt, la tía Pepa mete al gato en una lata con agua, ata la tapa con alambre y la coloca sobre el brasero hasta que el animal se cuece vivo.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué nombre lleva pintado el bote rojo que Chino Pérez trae a remolque a la isleta donde caza nutrias con Renato?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1600,
+     "answer": "El bote rojo lleva pintado el nombre «San Felipe», en el cuento *Los nutrieros*, de Rodolfo Walsh.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "Tras quince días de inundación en la Buenos Aires rosista durante la cuaresma, ¿cuántos novillos llegan por el paso de Burgos para el abasto?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 7460,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué edad tiene la niña del matrimonio que vive en una casita de madera junto a tres líneas férreas, al pie de una montaña empinada, y de la que sus padres saben que algún día la matará un tren?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 387,
+     "answer": "Tiene tres años. En «La hija del guardaagujas», de Vicente Huidobro, se describe como «una criatura de tres años».",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué descuento le recomienda el padrino moribundo a su ahijado para vender los muñecos de sacerdote y religiosas que difícilmente se venden en la tienda?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1248,
+     "answer": "En «La tienda de muñecos», de Julio Garmendia, el padrino recomienda ofrecer los muñecos de sacerdote con un 10 % de descuento; respecto a las religiosas, dice que se haga el cargo de que es «una que les das».",
+     "verdict": "parcial"
+    },
+    {
+     "q": "¿Qué le grita el loro Jesusito a Andrés Erre en el momento en que este se ahorca de una viga, tras descubrir la traición de su alter ego?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 7464,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Dónde va a caer el gnomo de cuero irlandés que vive sobre la balanza de cartas del escritorio de un poeta cuando, furioso, intenta echar a los dos menestriles que fueron sus compañeros?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2640,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué piden en la confitería el hombre de la quemadura junto a la boca y la mujer del pómulo hundido después de conocerse en la cola del cine?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 4782,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "Al final, ¿en qué pocillo pide tomar el café José Claudio, el marido ciego de Mariana, cuando ella se lo iba a servir en el verde?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2024,
+     "answer": "Pide tomar el café en el pocillo rojo. (Mario Benedetti, «Los pocillos»).",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cuánto tiempo llevaba el viejito jorobado del cartapacio acudiendo cada día a pedir audiencia con el Señor X, Director General de la Confederación Internacional de la Producción Universal?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2635,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué hace que Carlos y Ramón guarden las armas cuando están a punto de batirse a muerte por la herencia de su hermana Luisana?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1684,
+     "answer": "En «El piano viejo», de Rómulo Gallegos, los hermanos oyen una nota salir del piano cerrado: la tecla que Luisana había dejado presionada suena a destiempo. El sonido los sobrecoge y hace que guarden las armas.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué decía el cartel de la tienda tranquila y limpia que sedujo al narrador de niño cuando acompañó a su madre a buscar unos cubiertos robados a una casa de empeños?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2428,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Cómo se llama la isla griega que el steward Marini contempla por la ventanilla en sus vuelos de la línea Roma-Teherán?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2901,
+     "answer": "La isla se llama Xiros, en «La isla a mediodía», de Julio Cortázar.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué firma llevaba el primer papelito, atado a una tuerca, que cayó del tren frente a Leticia, Holanda y la narradora mientras jugaban a las estatuas junto a las vías?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 4567,
+     "answer": "Llevaba la firma «Ariel B.», en «Final del juego», de Julio Cortázar.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿En qué ciudad y en qué lugar se encuentra Alina Reyes con la mujer harapienta con la que se abraza durante su viaje de bodas?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1872,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Por qué rompe a llorar la viuda de los ojos ahumados cuando el narrador empieza a probar el piano en la reunión donde había leído un cuento?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2023,
+     "answer": "En *Nadie encendía las lámparas*, de Felisberto Hernández, la viuda rompe a llorar porque no quería oír música desde la muerte de su esposo; según su sobrina, se habían amado «hasta llegar a la inocencia».",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué marca de medias vendía el concertista de piano convertido en corredor comercial que se ponía a llorar en las tiendas para vender más?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 4844,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Por qué derribaron el gomero que estaba pegado a la ventana del cuarto de vestir de Brígida, la joven esposa de Luis?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3520,
+     "answer": "Derribaron el gomero porque sus raíces levantaban las baldosas de la acera, y la comisión de vecinos intervino por ello. Así se cuenta en «El árbol», de María Luisa Bombal.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cómo se asegura el viejo minero de que su hijo Pablo, de ocho años, no abandone la puerta de ventilación que debe manejar en el fondo de la mina?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2616,
+     "answer": "En «La compuerta número 12», de Baldomero Lillo, el viejo ata a Pablo por la cintura con una cuerda y asegura el otro extremo a un perno incrustado en la roca.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué hace María de los Ángeles después de ver subir del pozo el cadáver de su hijo, el joven minero apodado Cabeza de Cobre, muerto en un derrumbe?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 4045,
+     "answer": "En **«El Chiflón del Diablo», de Baldomero Lillo**, María de los Ángeles intenta abalanzarse sobre el cadáver, pero la multitud la retiene contra la barrera. Después, se arroja al pozo y desaparece en el abismo.",
+     "verdict": "parcial"
+    },
+    {
+     "q": "¿Qué le pasó a la vela que Natalia puso entre las manos de Tanilo Santos cuando él rezaba arrodillado frente a la Virgen?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3367,
+     "answer": "En «Talpa», de Juan Rulfo, una lágrima grande de Tanilo apagó la vela que Natalia había puesto entre sus manos.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué le manda hacer su madrina al muchacho siempre hambriento, al que Felipa da de comer, mientras está sentado junto a la alcantarilla?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2124,
+     "answer": "En **«Macario»**, de **Juan Rulfo**, su madrina le manda esperar junto a la alcantarilla con una tabla y golpear a las ranas que salgan.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Dónde vio por primera vez el narrador la araña venenosa que después soltó en su departamento, y con quién estaba?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1867,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "En el anuncio de Arreola sobre el aparato que convierte en electricidad los movimientos de los niños, ¿qué casa fabricante lo garantiza y dónde está?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 6030,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Cómo presenta el profesor Fombona al joven poeta Feijoo ante Marcel Bataillon?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1756,
+     "answer": "En *Obras completas*, de Augusto Monterroso, Fombona le dice a Marcel Bataillon: «Maestro, quiero presentarle a Feijoo. Es especialista en Unamuno; prepara la edición crítica de sus Obras completas».",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué palabras estaban grabadas en la alianza que apareció cosida a la camisa de Adrián Cadena, a la altura del corazón?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3043,
+     "answer": "«Adrián y Severina gloriosos», según «El anillo», de Elena Garro.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cómo acaban la narradora y Guadalupe con el ser de ojos amarillos que el marido llevó a vivir a la casa?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1744,
+     "answer": "En «El huésped», de Amparo Dávila, la narradora y Guadalupe clausuran con tablas la puerta del cuarto donde está el ser y lo dejan encerrado sin aire, luz ni alimento hasta que muere.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué le propone el sacerdote a Luisa en nombre de su tío Apolonio, que agoniza?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1675,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "Según le cuentan doña Magdalena y Amalia a Alfonso, ¿cómo perdió la vista el capitán de Artillería?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 7453,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "En su texto irónico sobre los inconvenientes de ser ejecutado ante un pelotón, ¿a qué atribuye Julio Torri la palidez de muchos condenados en el postrer trance?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1966,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué revela Sacramento después de que la asamblea de ejidatarios e ingenieros aprueba que los de San Juan de las Manzanas castiguen a su Presidente Municipal?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1827,
+     "answer": "En «La muerte tiene permiso», de Edmundo Valadés, Sacramento revela que el Presidente Municipal ya estaba muerto desde el día anterior.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "Después de que el granizo destruye su cosecha, Lencho pide cien pesos por correo; ¿cuánto dinero le llega y a quién culpa del faltante?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1215,
+     "answer": "En «Una carta a Dios», de Gregorio López y Fuentes, a Lencho le llegan sesenta pesos y culpa del faltante a los empleados de correos, a quienes llama ladrones.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Para qué quiere el hombre del machete sacarle los ojos al narrador que salió a caminar de noche por el pueblo?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2628,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "Veinte años después de soñarlo de niño, el narrador vuelve a soñar con el felino negro, que esta vez le habla; ¿cuántas palabras anota al despertar y qué resultan ser?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2812,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Cómo muere el Conde Fabricio de Portinaris al huir aterrado de la aparición del Cardenal?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1809,
+     "answer": "Muere al intentar escapar por los barrotes de la puerta de bronce: queda atrapado con la cabeza entre dos de ellos y fallece allí. Ocurre en «La puerta de bronce», de Manuel Romero de Terreros.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué pasa con el pliego que don Alejandro encuentra dentro del sobre del cofre de hierro?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 727,
+     "answer": "El pliego se le escapa de las manos a don Alejandro y cae entre las llamas de la chimenea, que lo consumen. (De «El cofre», de Manuel Romero de Terreros.)",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cómo consigue la hiena del zoológico un rostro para ir al baile en lugar de la joven narradora?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1865,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿De qué oficio era el padre del narrador, el joven acaieno que se embarca en las naves de Agamemnón para ir a Troya?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 4470,
+     "answer": "El padre del narrador era talabartero. La información aparece en *Semejante a la noche*, de Alejo Carpentier.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué estaba haciendo el ciego que Ana ve desde el tranvía y que desencadena su crisis?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3509,
+     "answer": "El ciego estaba masticando chicle. La información proviene de «Amor», de Clarice Lispector.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué trabajo le impone el rey al poeta hambriento que llega a su corte para que se gane la comida?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1648,
+     "answer": "El rey le ordena dar vueltas a un manubrio y tocar una caja de música para ganarse la comida. («El rey burgués», de Rubén Darío.)",
+     "verdict": "correcto"
+    },
+    {
+     "q": "Tras encontrar una pequeña insignia de plata, ¿qué lista le encarga al narrador el conferenciante de la sociedad secreta como primer encargo?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": true,
+     "prompt_words": 1498,
+     "answer": "Le encarga una lista de todos los teléfonos que empiecen con 38, en «Obligaciones», de Andrés Rivera.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué nombre imagina el narrador para el obrero que, según su reconstrucción, mata a patadas a Octavio Ramírez en la calle García?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2805,
+     "answer": "Lo llama Epaminondas, en su reconstrucción de «Un hombre muerto a puntapiés», de Pablo Palacio.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cómo se llama el cerdo que don Santos, el abuelo de pierna de palo, engorda con la basura que recogen sus nietos Efraín y Enrique?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3467,
+     "answer": "El cerdo se llama Pascual, en «Los gallinazos sin plumas», de Julio Ramón Ribeyro.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "Mientras la vieja Remigia de Paso Hondo pide lluvia, ¿por cuánto dinero en velas cuentan las ánimas del Purgatorio que una vez enviaron un diluvio entero?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 4473,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "En el entierro de su padre, ¿qué hace Eduardo cuando el ataúd se atasca al introducirlo en el nicho?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1252,
+     "answer": "En «Edipo», de Virgilio Díaz Grullón, Eduardo corre hacia el féretro y lo empuja con todas sus fuerzas hasta que logra meterlo al fondo del nicho.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "En la crónica sobre las peleas de gallos en Puerto Rico, ¿cómo se llama la prueba en que se echan a reñir dos gallos de igual peso con las espuelas envueltas en trapo o papel?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2268,
+     "answer": "Se llama **las botas**, según «La gallera», de Manuel A. Alonso.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "En el pueblo diezmado por el tifus, ¿qué hace el sacristán don Jáuregui con el caballo tordillo de los difuntos hermanos Arango?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1869,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué hace sonar Pedro Quispe desde lo alto de una colina para convocar a los indios contra los viajeros Álvarez y Córdova?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1810,
+     "answer": "Pedro Quispe hace sonar una bocina. Esto ocurre en «Justicia india», de Ricardo Jaimes Freyre.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "Ante la escasez de carne en el pueblo, ¿de qué parte de su cuerpo corta el señor Ansaldo el filete que se come?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1105,
+     "answer": "En «La carne», de Virgilio Piñera, el señor Ansaldo corta el filete de su nalga izquierda.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué hace al final José Pashaca, ya enfermo, con el cántaro donde guardaba el dinero ganado con sus cosechas?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1057,
+     "answer": "Al final, José Pashaca entierra el cántaro con el dinero y borra todo rastro del hoyo. («La botija», de Salarrué.)",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Con qué engaño consigue el leñador convertido en médico que el Diablo salga del cuerpo de la reina?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 7454,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Quién le explicó a ñor Cornelio Cacheda que sus gemelas nacieron rubias porque la madre miró el eclipse de sol?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1064,
+     "answer": "Se lo explicó un maestro italiano que había construido la torre de la iglesia de la villa, en *El clis de sol*, de Manuel González Zeledón.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cómo termina el Santón de Jandripur cuando las tropas invasoras ocupan la aldea abandonada?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2967,
+     "answer": "En «Sharaya», de Álvaro Mutis, un soldado apunta al Santón y dispara su ametralladora. Sharaya muere, aunque el relato presenta su muerte como un nuevo nacimiento.",
+     "verdict": "parcial"
+    },
+    {
+     "q": "¿Qué estaturas calcula el narrador para el marido y para el joven amante de la vecina, cuyas expresiones lee en el rostro de ella?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1405,
+     "answer": "En «Tragedia de un rostro», de Luis Vidales, el narrador calcula que el marido mide aproximadamente 1,70 metros y que el joven amante no supera 1,60 metros.",
+     "verdict": "correcto"
+    }
+   ],
+   "obra": 0.5955056179775281,
+   "evid": 0.6067415730337079,
+   "palabras_mediana": 2124.0,
+   "correcto": 0.5393258426966292,
+   "parcial": 0.0449438202247191,
+   "incorrecto": 0.02247191011235955,
+   "no_sabe": 0.39325842696629215,
+   "exactitud": 0.5617977528089888,
+   "exactitud_conocida": 0.5625,
+   "exactitud_poco_conocida": 0.5606060606060606
+  },
+  {
+   "name": "Coseno",
+   "retriever": "cos",
+   "top_works": 1,
+   "mode": "obra completa",
+   "rows": [
+    {
+     "q": "¿Qué enfermedad sufre Dahlmann tras golpearse la frente?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2433,
+     "answer": "Sufre una septicemia, según «El sur», de Jorge Luis Borges.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué ve el narrador en el sótano de la casa de la calle Garay?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 94,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué hacen los hermanos cuando los ruidos toman la parte del fondo de la casa?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 254,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿En qué animal se convierte el hombre que visita el acuario del Jardin des Plantes?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 65,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué novela lee el hombre sentado en el sillón de terciopelo verde?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 57,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué sueña el motociclista accidentado mientras está en el hospital?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 48,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué vomita el narrador que se queda en el departamento de Andrée en Buenos Aires?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1864,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué pasa con los automovilistas atrapados durante días en el embotellamiento de la autopista?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 9295,
+     "answer": "En «La autopista del sur», de Julio Cortázar, los automovilistas pasan de la espera y el desconcierto a organizarse: forman grupos, comparten alimentos y agua, atienden a los enfermos y establecen reglas. Durante esos días algunos mueren o abandonan la caravana, y surgen vínculos afectivos. Cuando el tránsito finalmente se reanuda, los grupos se dispersan y cada quien sigue su camino.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cómo intenta fray Bartolomé Arrazola salvarse de los indígenas que lo iban a sacrificar?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 367,
+     "answer": "En «El eclipse», de Augusto Monterroso, fray Bartolomé intenta salvarse amenazando con hacer que el sol se oscurezca si lo matan, aprovechando que sabe que ese día habrá un eclipse.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué negocio hacía Mr. Taylor con las cabezas reducidas?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 54,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué hicieron con la oveja negra después de fusilarla?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 104,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué le pide Juvencio Nava a su hijo que diga a quienes lo van a fusilar?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2440,
+     "answer": "En «¡Diles que no me maten!», de Juan Rulfo, Juvencio le pide a su hijo que les diga que no lo maten y que tengan lástima de él, «por caridad de Dios».",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿A quién carga el padre sobre los hombros mientras camina de noche buscando Tonaya?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 57,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Cómo es el viento y la tierra del pueblo de Luvina?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3067,
+     "answer": "En **“Luvina”**, de **Juan Rulfo**, el viento es pardo, casi negro, y sopla con fuerza: raspa las paredes, arranca tierra y puede llevarse los techos. La tierra es empinada, pedregosa y reseca, llena de barrancas y grietas; llueve muy poco.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué le pasó a la vaca de Tacha cuando creció el río?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1671,
+     "answer": "El río se llevó a la vaca de Tacha, la Serpentina, y la arrastró corriente abajo. En «Es que somos muy pobres», de Juan Rulfo.",
+     "verdict": "parcial"
+    },
+    {
+     "q": "¿Qué le explica el guardagujas al forastero sobre los trenes y las estaciones?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1443,
+     "answer": "En **“Cambiadores”**, de **Baldomero Lillo**, le explica que los trenes pasan rápido por las estaciones porque todos confían en el guardagujas, cuya maniobra es decisiva: si se equivoca, ya no puede corregirla a tiempo.",
+     "verdict": "incorrecto"
+    },
+    {
+     "q": "¿Qué encontró la hormiga que llevó al hormiguero un miligramo prodigioso?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2306,
+     "answer": "Encontró un prodigioso miligramo. («El prodigioso miligramo», de Juan José Arreola.)",
+     "verdict": "incorrecto"
+    },
+    {
+     "q": "¿En qué cuento la vida de don Marcial transcurre al revés, de la muerte al nacimiento?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 4705,
+     "answer": "En «Viaje a la semilla», de Alejo Carpentier.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Con quién se encuentra Laura cuando su coche se detiene en el puente de Cuitzeo?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 6135,
+     "answer": "Laura se encuentra con su primo, quien es también su marido, en «La culpa es de los tlaxcaltecas», de Elena Garro.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué libro le presta al fin la hija del dueño de la librería a la narradora?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 80,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué hace la gallina que la salva de ser cocinada para el almuerzo?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 58,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿En qué localidad venden los hermanos Nilsen a Juliana Burgos, y a quién?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1425,
+     "answer": "La venden en Morón a la patrona del prostíbulo. En «La intrusa», de Jorge Luis Borges.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cómo se llama el barco nórdico en cuyos marineros busca Emma Zunz a un hombre en el puerto, y de dónde es?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1980,
+     "answer": "El barco se llama **Nordstjärnan** y zarpa de **Malmö**. Así se indica en «Emma Zunz», de Jorge Luis Borges.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "Según el minotauro que narra su propia vida, ¿cada cuánto tiempo y cuántos hombres entran en su casa?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 302,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "En el sistema de numeración inventado por Ireneo Funes, ¿qué nombre usaba en lugar del número siete mil trece?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2743,
+     "answer": "En «Funes el memorioso», de Jorge Luis Borges, Funes decía «Máximo Pérez» en lugar de siete mil trece.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cuánto dinero escondió Baltasar Espinosa en uno de sus libros, por desconfianza hacia los Gutres, en la estancia Los Álamos?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1999,
+     "answer": "Baltasar Espinosa escondió doscientos cuarenta pesos en uno de sus libros, por desconfianza hacia los Gutres. («El evangelio según Marcos», de Jorge Luis Borges.)",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Por qué viaja tanto en avión el anciano escritor al que investiga el narrador por encargo de un diputado que sospechaba de un tráfico de órganos de viejos?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1032,
+     "answer": "Viaja tanto porque le dan premios literarios. Así lo explica el anciano escritor en «El caso de los viejitos voladores», de Adolfo Bioy Casares.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Con qué le llena Hebe los bolsillos a su marido Pedro para que su cuerpo, que ha perdido peso, no se eleve?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 974,
+     "answer": "En «El leve Pedro», de Enrique Anderson Imbert, Hebe le llena los bolsillos con grandes tuercas, caños de plomo y piedras.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "En el hotel donde un huevo frito pasa de mano en mano entre varios cocineros y resulta delicioso, ¿qué regla culinaria establece el jefe de fiscalización?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 299,
+     "answer": "En «Tres cocineros y un huevo frito», de Macedonio Fernández, el jefe establece que cada huevo frito debe ser trabajado en una tercera parte por un cocinero diferente.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "En el monólogo escrito en habla porteña sobre una pelea de boxeo en el Luna Park, ¿en qué asalto gana Bonavena al brasileño Pires y de qué modo?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 263,
+     "answer": "Bonavena gana en el sexto asalto por nocaut: Pires queda aturdido y su equipo decide que no continúe. Así se cuenta en «El rulo», de Eduardo Gudiño Kieffer.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Dónde muere el atorrante de la calle Corrientes, antiguo condiscípulo del narrador en el colegio del Salvador, y en qué noche?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2804,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Cuántos ejemplares llevaba vendidos la primera edición de la novela cuyos gerundios suprimía el narrador antes de arrastrarse bajo el escritorio de su compañera del walkman?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 541,
+     "answer": "La primera edición llevaba vendidos quince mil ejemplares, según *El corrector*, de Andrés Rivera.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Dónde termina encerrado Octaviano Crivellini, el copista de estatuas acosado por el niño Tirso en la pensión de Mme. Renard?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1193,
+     "answer": "Octaviano Crivellini termina encerrado en un gran armario del corralón. («El vendedor de estatuas», de Silvina Ocampo.)",
+     "verdict": "correcto"
+    },
+    {
+     "q": "En el armario de nogal cuyas habitantes se volvieron escritoras por la inacción y el aburrimiento, ¿cómo se titula la novela que escribió la novelista con gafas tras diez años de trabajo?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 493,
+     "answer": "La novela se titula *Huelga*, en «Las muñecas» de Juan Rodolfo Wilcock.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "El narrador vive toda una vida (boda en Ramos Mejía, mellizos en Liniers) durante un solo viaje por el Ferrocarril Oeste. ¿En qué estación se entera de la muerte de su esposa?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 700,
+     "answer": "Se entera en Flores. («El tren», de Santiago Dabove.)",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cómo mata la tía Pepa Mondelli a su gato negro después de que este devoró uno de sus pollitos?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1272,
+     "answer": "En «El gato cocido», de Roberto Arlt, la tía Pepa mete al gato en una lata con agua, ata la tapa con alambre y la coloca sobre el brasero hasta que el animal se cuece vivo.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué nombre lleva pintado el bote rojo que Chino Pérez trae a remolque a la isleta donde caza nutrias con Renato?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1600,
+     "answer": "El bote rojo lleva pintado el nombre «San Felipe», en el cuento *Los nutrieros*, de Rodolfo Walsh.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "Tras quince días de inundación en la Buenos Aires rosista durante la cuaresma, ¿cuántos novillos llegan por el paso de Burgos para el abasto?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 6131,
+     "answer": "Llegan cincuenta novillos. (Esteban Echeverría, «El matadero».)",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué edad tiene la niña del matrimonio que vive en una casita de madera junto a tres líneas férreas, al pie de una montaña empinada, y de la que sus padres saben que algún día la matará un tren?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 387,
+     "answer": "Tiene tres años. En «La hija del guardaagujas», de Vicente Huidobro, se describe como «una criatura de tres años».",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué descuento le recomienda el padrino moribundo a su ahijado para vender los muñecos de sacerdote y religiosas que difícilmente se venden en la tienda?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1248,
+     "answer": "En «La tienda de muñecos», de Julio Garmendia, el padrino recomienda ofrecer los muñecos de sacerdote con un 10 % de descuento; respecto a las religiosas, dice que se haga el cargo de que es «una que les das».",
+     "verdict": "parcial"
+    },
+    {
+     "q": "¿Qué le grita el loro Jesusito a Andrés Erre en el momento en que este se ahorca de una viga, tras descubrir la traición de su alter ego?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2104,
+     "answer": "En «El difunto y yo», de Julio Garmendia, el loro Jesusito le grita: «¡Adiós, Doctor!».",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Dónde va a caer el gnomo de cuero irlandés que vive sobre la balanza de cartas del escritorio de un poeta cuando, furioso, intenta echar a los dos menestriles que fueron sus compañeros?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1461,
+     "answer": "Cae en el fondo del tintero. («El genio del pesacartas», de Teresa de la Parra).",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué piden en la confitería el hombre de la quemadura junto a la boca y la mujer del pómulo hundido después de conocerse en la cola del cine?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1875,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "Al final, ¿en qué pocillo pide tomar el café José Claudio, el marido ciego de Mariana, cuando ella se lo iba a servir en el verde?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2024,
+     "answer": "Pide tomar el café en el pocillo rojo. (Mario Benedetti, «Los pocillos»).",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cuánto tiempo llevaba el viejito jorobado del cartapacio acudiendo cada día a pedir audiencia con el Señor X, Director General de la Confederación Internacional de la Producción Universal?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1403,
+     "answer": "Llevaba ocho meses acudiendo cada día. («El acto libre», de José Edwards.)",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué hace que Carlos y Ramón guarden las armas cuando están a punto de batirse a muerte por la herencia de su hermana Luisana?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1684,
+     "answer": "En «El piano viejo», de Rómulo Gallegos, los hermanos oyen una nota salir del piano cerrado: la tecla que Luisana había dejado presionada suena a destiempo. El sonido los sobrecoge y hace que guarden las armas.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué decía el cartel de la tienda tranquila y limpia que sedujo al narrador de niño cuando acompañó a su madre a buscar unos cubiertos robados a una casa de empeños?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 3629,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Cómo se llama la isla griega que el steward Marini contempla por la ventanilla en sus vuelos de la línea Roma-Teherán?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2901,
+     "answer": "La isla se llama Xiros, en «La isla a mediodía», de Julio Cortázar.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué firma llevaba el primer papelito, atado a una tuerca, que cayó del tren frente a Leticia, Holanda y la narradora mientras jugaban a las estatuas junto a las vías?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 4567,
+     "answer": "Llevaba la firma «Ariel B.», en «Final del juego», de Julio Cortázar.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿En qué ciudad y en qué lugar se encuentra Alina Reyes con la mujer harapienta con la que se abraza durante su viaje de bodas?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2980,
+     "answer": "Se encuentra en Budapest, en el centro de un puente. La información proviene de «Lejana», de Julio Cortázar.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Por qué rompe a llorar la viuda de los ojos ahumados cuando el narrador empieza a probar el piano en la reunión donde había leído un cuento?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2023,
+     "answer": "En *Nadie encendía las lámparas*, de Felisberto Hernández, la viuda rompe a llorar porque no quería oír música desde la muerte de su esposo; según su sobrina, se habían amado «hasta llegar a la inocencia».",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué marca de medias vendía el concertista de piano convertido en corredor comercial que se ponía a llorar en las tiendas para vender más?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 4844,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Por qué derribaron el gomero que estaba pegado a la ventana del cuarto de vestir de Brígida, la joven esposa de Luis?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3520,
+     "answer": "Derribaron el gomero porque sus raíces levantaban las baldosas de la acera, y la comisión de vecinos intervino por ello. Así se cuenta en «El árbol», de María Luisa Bombal.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cómo se asegura el viejo minero de que su hijo Pablo, de ocho años, no abandone la puerta de ventilación que debe manejar en el fondo de la mina?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2616,
+     "answer": "En «La compuerta número 12», de Baldomero Lillo, el viejo ata a Pablo por la cintura con una cuerda y asegura el otro extremo a un perno incrustado en la roca.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué hace María de los Ángeles después de ver subir del pozo el cadáver de su hijo, el joven minero apodado Cabeza de Cobre, muerto en un derrumbe?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 4045,
+     "answer": "En **«El Chiflón del Diablo», de Baldomero Lillo**, María de los Ángeles intenta abalanzarse sobre el cadáver, pero la multitud la retiene contra la barrera. Después, se arroja al pozo y desaparece en el abismo.",
+     "verdict": "parcial"
+    },
+    {
+     "q": "¿Qué le pasó a la vela que Natalia puso entre las manos de Tanilo Santos cuando él rezaba arrodillado frente a la Virgen?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3367,
+     "answer": "En «Talpa», de Juan Rulfo, una lágrima grande de Tanilo apagó la vela que Natalia había puesto entre sus manos.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué le manda hacer su madrina al muchacho siempre hambriento, al que Felipa da de comer, mientras está sentado junto a la alcantarilla?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2124,
+     "answer": "En **«Macario»**, de **Juan Rulfo**, su madrina le manda esperar junto a la alcantarilla con una tabla y golpear a las ranas que salgan.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Dónde vio por primera vez el narrador la araña venenosa que después soltó en su departamento, y con quién estaba?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 83,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "En el anuncio de Arreola sobre el aparato que convierte en electricidad los movimientos de los niños, ¿qué casa fabricante lo garantiza y dónde está?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2202,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Cómo presenta el profesor Fombona al joven poeta Feijoo ante Marcel Bataillon?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1756,
+     "answer": "En *Obras completas*, de Augusto Monterroso, Fombona le dice a Marcel Bataillon: «Maestro, quiero presentarle a Feijoo. Es especialista en Unamuno; prepara la edición crítica de sus Obras completas».",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué palabras estaban grabadas en la alianza que apareció cosida a la camisa de Adrián Cadena, a la altura del corazón?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3043,
+     "answer": "«Adrián y Severina gloriosos», según «El anillo», de Elena Garro.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cómo acaban la narradora y Guadalupe con el ser de ojos amarillos que el marido llevó a vivir a la casa?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1744,
+     "answer": "En «El huésped», de Amparo Dávila, la narradora y Guadalupe clausuran con tablas la puerta del cuarto donde está el ser y lo dejan encerrado sin aire, luz ni alimento hasta que muere.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué le propone el sacerdote a Luisa en nombre de su tío Apolonio, que agoniza?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 77,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "Según le cuentan doña Magdalena y Amalia a Alfonso, ¿cómo perdió la vista el capitán de Artillería?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2325,
+     "answer": "En *La cena*, de Alfonso Reyes, el capitán perdió la vista en la explosión de una caldera, al día siguiente de llegar a Alemania.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "En su texto irónico sobre los inconvenientes de ser ejecutado ante un pelotón, ¿a qué atribuye Julio Torri la palidez de muchos condenados en el postrer trance?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2128,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué revela Sacramento después de que la asamblea de ejidatarios e ingenieros aprueba que los de San Juan de las Manzanas castiguen a su Presidente Municipal?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1827,
+     "answer": "En «La muerte tiene permiso», de Edmundo Valadés, Sacramento revela que el Presidente Municipal ya estaba muerto desde el día anterior.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "Después de que el granizo destruye su cosecha, Lencho pide cien pesos por correo; ¿cuánto dinero le llega y a quién culpa del faltante?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1215,
+     "answer": "En «Una carta a Dios», de Gregorio López y Fuentes, a Lencho le llegan sesenta pesos y culpa del faltante a los empleados de correos, a quienes llama ladrones.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Para qué quiere el hombre del machete sacarle los ojos al narrador que salió a caminar de noche por el pueblo?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2218,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "Veinte años después de soñarlo de niño, el narrador vuelve a soñar con el felino negro, que esta vez le habla; ¿cuántas palabras anota al despertar y qué resultan ser?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 5745,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Cómo muere el Conde Fabricio de Portinaris al huir aterrado de la aparición del Cardenal?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1809,
+     "answer": "Muere al intentar escapar por los barrotes de la puerta de bronce: queda atrapado con la cabeza entre dos de ellos y fallece allí. Ocurre en «La puerta de bronce», de Manuel Romero de Terreros.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué pasa con el pliego que don Alejandro encuentra dentro del sobre del cofre de hierro?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 727,
+     "answer": "El pliego se le escapa de las manos a don Alejandro y cae entre las llamas de la chimenea, que lo consumen. (De «El cofre», de Manuel Romero de Terreros.)",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cómo consigue la hiena del zoológico un rostro para ir al baile en lugar de la joven narradora?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 63,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿De qué oficio era el padre del narrador, el joven acaieno que se embarca en las naves de Agamemnón para ir a Troya?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 4470,
+     "answer": "El padre del narrador era talabartero. La información aparece en *Semejante a la noche*, de Alejo Carpentier.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué estaba haciendo el ciego que Ana ve desde el tranvía y que desencadena su crisis?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3509,
+     "answer": "El ciego estaba masticando chicle. La información proviene de «Amor», de Clarice Lispector.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué trabajo le impone el rey al poeta hambriento que llega a su corte para que se gane la comida?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 193,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "Tras encontrar una pequeña insignia de plata, ¿qué lista le encarga al narrador el conferenciante de la sociedad secreta como primer encargo?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 990,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Qué nombre imagina el narrador para el obrero que, según su reconstrucción, mata a patadas a Octavio Ramírez en la calle García?",
+     "fame": "conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 2143,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    },
+    {
+     "q": "¿Cómo se llama el cerdo que don Santos, el abuelo de pierna de palo, engorda con la basura que recogen sus nietos Efraín y Enrique?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3467,
+     "answer": "El cerdo se llama Pascual, en «Los gallinazos sin plumas», de Julio Ramón Ribeyro.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "Mientras la vieja Remigia de Paso Hondo pide lluvia, ¿por cuánto dinero en velas cuentan las ánimas del Purgatorio que una vez enviaron un diluvio entero?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 3153,
+     "answer": "En «Dos pesos de agua», de Juan Bosch, las ánimas cuentan que enviaron un diluvio entero por veinte centavos en velas.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "En el entierro de su padre, ¿qué hace Eduardo cuando el ataúd se atasca al introducirlo en el nicho?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1252,
+     "answer": "En «Edipo», de Virgilio Díaz Grullón, Eduardo corre hacia el féretro y lo empuja con todas sus fuerzas hasta que logra meterlo al fondo del nicho.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "En la crónica sobre las peleas de gallos en Puerto Rico, ¿cómo se llama la prueba en que se echan a reñir dos gallos de igual peso con las espuelas envueltas en trapo o papel?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2268,
+     "answer": "Se llama **las botas**, según «La gallera», de Manuel A. Alonso.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "En el pueblo diezmado por el tifus, ¿qué hace el sacristán don Jáuregui con el caballo tordillo de los difuntos hermanos Arango?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2263,
+     "answer": "En «La muerte de los Arango», de José María Arguedas, don Jáuregui pasea al tordillo por la plaza y luego lo ciega y lo hace saltar al precipicio, diciendo que así ha matado a la peste.",
+     "verdict": "parcial"
+    },
+    {
+     "q": "¿Qué hace sonar Pedro Quispe desde lo alto de una colina para convocar a los indios contra los viajeros Álvarez y Córdova?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1810,
+     "answer": "Pedro Quispe hace sonar una bocina. Esto ocurre en «Justicia india», de Ricardo Jaimes Freyre.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "Ante la escasez de carne en el pueblo, ¿de qué parte de su cuerpo corta el señor Ansaldo el filete que se come?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1105,
+     "answer": "En «La carne», de Virgilio Piñera, el señor Ansaldo corta el filete de su nalga izquierda.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Qué hace al final José Pashaca, ya enfermo, con el cántaro donde guardaba el dinero ganado con sus cosechas?",
+     "fame": "conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1057,
+     "answer": "Al final, José Pashaca entierra el cántaro con el dinero y borra todo rastro del hoyo. («La botija», de Salarrué.)",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Con qué engaño consigue el leñador convertido en médico que el Diablo salga del cuerpo de la reina?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2078,
+     "answer": "En **«La suegra del diablo», de Carmen Lyra**, el leñador aprovecha el alboroto y engaña al Diablo diciéndole que su suegra ha llegado con la botijuela para encerrarlo de nuevo. Asustado, el Diablo sale corriendo del cuerpo de la reina.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Quién le explicó a ñor Cornelio Cacheda que sus gemelas nacieron rubias porque la madre miró el eclipse de sol?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 1064,
+     "answer": "Se lo explicó un maestro italiano que había construido la torre de la iglesia de la villa, en *El clis de sol*, de Manuel González Zeledón.",
+     "verdict": "correcto"
+    },
+    {
+     "q": "¿Cómo termina el Santón de Jandripur cuando las tropas invasoras ocupan la aldea abandonada?",
+     "fame": "poco_conocida",
+     "work_hit": true,
+     "evid_hit": true,
+     "prompt_words": 2967,
+     "answer": "En «Sharaya», de Álvaro Mutis, un soldado apunta al Santón y dispara su ametralladora. Sharaya muere, aunque el relato presenta su muerte como un nuevo nacimiento.",
+     "verdict": "parcial"
+    },
+    {
+     "q": "¿Qué estaturas calcula el narrador para el marido y para el joven amante de la vecina, cuyas expresiones lee en el rostro de ella?",
+     "fame": "poco_conocida",
+     "work_hit": false,
+     "evid_hit": false,
+     "prompt_words": 1376,
+     "answer": "No lo sé.",
+     "verdict": "no_sabe"
+    }
+   ],
+   "obra": 0.6966292134831461,
+   "evid": 0.6966292134831461,
+   "palabras_mediana": 1809.0,
+   "correcto": 0.6179775280898876,
+   "parcial": 0.056179775280898875,
+   "incorrecto": 0.02247191011235955,
+   "no_sabe": 0.30337078651685395,
+   "exactitud": 0.6460674157303371,
+   "exactitud_conocida": 0.5625,
+   "exactitud_poco_conocida": 0.7878787878787878
+  }
+ ],
+ "fragmentos": [
+  {
+   "name": "EAM m=16",
+   "retriever": "eam",
+   "m": 16,
+   "top_works": 5,
+   "top_chunks": 8,
+   "obra": 0.7303370786516854,
+   "evid": 0.3258426966292135,
+   "correcto": 0.34831460674157305,
+   "parcial": 0.056179775280898875,
+   "incorrecto": 0.02247191011235955,
+   "no_sabe": 0.5730337078651685,
+   "exactitud": 0.37640449438202245,
+   "exactitud_conocida": 0.42857142857142855,
+   "exactitud_poco_conocida": 0.2878787878787879
+  },
+  {
+   "name": "Coseno",
+   "retriever": "cos",
+   "m": null,
+   "top_works": 5,
+   "top_chunks": 8,
+   "obra": 0.8314606741573034,
+   "evid": 0.42696629213483145,
+   "correcto": 0.449438202247191,
+   "parcial": 0.056179775280898875,
+   "incorrecto": 0.033707865168539325,
+   "no_sabe": 0.4606741573033708,
+   "exactitud": 0.47752808988764045,
+   "exactitud_conocida": 0.48214285714285715,
+   "exactitud_poco_conocida": 0.4696969696969697
+  }
+ ],
+ "direct": {
+  "correcto": 0.3595505617977528,
+  "parcial": 0.0898876404494382,
+  "incorrecto": 0.0449438202247191,
+  "no_sabe": 0.5056179775280899,
+  "exactitud": 0.4044943820224719,
+  "exactitud_conocida": 0.625,
+  "exactitud_poco_conocida": 0.030303030303030304
+ }
+}
