@@ -1,0 +1,17 @@
+# Entorno eamrag para macOS (Python 3.11). Sin CUDA: corre en CPU.
+#   conda create -n eamrag python=3.11
+#   pip install -r requirements-macos.txt
+# PyTorch dejó de publicar wheels para macOS Intel (x86_64) después de la 2.2.2,
+# y esa versión está compilada contra NumPy 1.x; por eso numpy<2 y pandas<3.
+# En Apple Silicon (arm64) también funciona; ahí se puede quitar el pin de torch.
+torch==2.2.2
+numpy<2
+pandas<3
+transformers>=4.44,<5
+sentencepiece
+protobuf
+tqdm
+openai
+python-dotenv
+# Sólo para make_pdf.py (documentación en PDF).
+reportlab

@@ -27,6 +27,15 @@ pip install torch --index-url https://download.pytorch.org/whl/cu124
 pip install -r requirements.txt
 ```
 
+En macOS (sin CUDA, corre en CPU) se usa `requirements-macos.txt`: PyTorch sólo llega a la
+2.2.2 en Mac Intel, y esa versión necesita NumPy 1.x.
+
+```bash
+conda create -n eamrag python=3.11
+conda activate eamrag
+pip install -r requirements-macos.txt
+```
+
 SONAR: el paquete oficial `sonar-space` depende de fairseq2, que no corre en Windows, así que
 se usa el port a HuggingFace con los mismos pesos (`cointegrated/SONAR_200_text_encoder`,
 idioma `spa_Latn`, mean-pooling).
